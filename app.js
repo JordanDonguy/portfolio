@@ -46,19 +46,17 @@ window.onresize = function() {
     if (window.innerWidth > 950) {
         navbar.style.display = 'flex';
         backdropFilter.style.display = 'flex';
+        présentation.style.clipPath = 'polygon(0% -90%,90% 100%, 0% 100%)';
+    } else if (window.innerWidth > 500) {
+        navbar.style.display = 'none';
+        backdropFilter.style.display = 'none';
+        présentation.style.clipPath = 'polygon(0% -90%,90% 100%, 0% 100%)';
     } else {
         navbar.style.display = 'none';
         backdropFilter.style.display = 'none';
+        présentation.style.clipPath = 'polygon(0% -60%,100% 100%, 0% 100%)';
     };
 };
-
-window.onresize = function() {
-    if (window.innerWidth > 500) {
-        présentation.style.clipPath = 'polygon(0% -90%,90% 100%, 0% 100%)';
-    } else {
-        présentation.style.clipPath = 'polygon(0% -60%,100% 100%, 0% 100%)';
-    }
-}
 
 for (let i = 0; i < navLink.length; i++) {
     navLink[i].onclick = function() {
