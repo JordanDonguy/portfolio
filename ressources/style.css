@@ -42,7 +42,7 @@ header h2 a {
     font-weight: 400;
 }
 
-@media only screen and (min-width: 700px) {
+@media (hover: hover) {
     header h2 a:hover {
         color: rgba(55, 210, 230, 0.864);
         font-size: 2.2rem;
@@ -235,7 +235,7 @@ nav a:active {
     padding-bottom: 30px;
 }
 
-.images-container2 {
+.projets-container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -272,7 +272,7 @@ nav a:active {
     width: 100%;
 }
 
-@media only screen and (min-width: 700px) {
+@media (hover: hover) {
     .images2:hover {
         width: 420px;
         height: 420px;
@@ -327,7 +327,7 @@ nav a:active {
     padding: 10px;
 }
 
-@media only screen and (min-width: 700px) {
+@media (hover: hover) {
     #contact a:hover {
         font-size: 2rem;
         transition-duration: 100ms;
