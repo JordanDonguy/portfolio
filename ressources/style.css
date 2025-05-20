@@ -1,6 +1,21 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-family: 'Parkinsans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
 }
 
 a {
@@ -8,20 +23,12 @@ a {
     color: rgb(230, 240, 255);
 }
 
-html {
-    font-family: 'Parkinsans', sans-serif;
-}
-
-body {
-    background-color: black;
-}
-
 header {
-    background-color: rgba(2, 4, 5, 0.75); 
+    background-color: rgba(2, 4, 5, 0.75);
     backdrop-filter: blur(20px);
     position: fixed;
     height: 100px;
-    width: 0%;
+    width: 100%;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -122,10 +129,8 @@ nav a:active {
 
 .présentation {
     width: 100%;
-    backdrop-filter: blur(1px);
-    background-color: rgba(11, 14, 15, 0.93);
-    clip-path: polygon(0% 0%,00% 100%,0% 100%);
-    transition: clip-path 1.25s;
+
+    transition: width 1.25s;
     color: rgb(200, 220, 240);
     display: flex;
     flex-direction: column;
@@ -135,36 +140,23 @@ nav a:active {
     padding-top: 100px;
 }
 
-#hello,
-#my-name,
-#me {
+#Hi {
     color: transparent;
-    opacity: 0.9;
+    opacity: 1;
 }
 
-#hello {
-    margin-left: max(calc(30vw - 20rem), 5vw);
-    max-width: max(45%, 300px);
-    transition: color 2s;
-    transition-delay: 1.3s;
-}
-
-#my-name {
-    margin-left: max(calc(45vw - 30rem), 5vw);
-    max-width: 60%;
-    transition: color 1.75s;
-    transition-delay: 1.8s;
-}
-
-#me {
-    margin-left: max(calc(60vw - 39rem), 5vw);
-    max-width: 70%;
-    transition: color 1.5s;
-    transition-delay: 2.3s;
+#Hi {
+    width: 0%;
+    transition: width 0s, font-size 1.5s;
+    text-align: center;
+    background-color: rgba(2, 4, 5, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 50px 10px;
+    font-size: 0rem;
 }
 
 .présentation h1,
-.présentation h2  {
+.présentation h2 {
     font-weight: 300;
 }
 
@@ -174,10 +166,11 @@ nav a:active {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    height: 100%;
+    align-items: center;
     z-index: 2;
     padding-top: 50px;
     background-color: rgb(24, 28, 28);
+    padding-bottom: 50px;
 }
 
 #compétences h2 {
@@ -194,24 +187,16 @@ nav a:active {
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
+    padding: 0px 5%;
 }
 
 .images {
-    width: 160px;
-    padding: 50px 100px;
+    width: 260px;
+    padding: 50px 50px;
     filter: drop-shadow(4px 4px 4px);
     z-index: 4;
 }
-
-#html5-img {
-    height: calc(4vw + 150px);
-}
-
-#css-img {
-    height: 35%;
-}
-
 
 /* Projets section */
 
@@ -280,7 +265,8 @@ nav a:active {
         margin-bottom: 40px;
         transition-duration: 100ms;
         cursor: pointer;
-        box-shadow: 2px 4px 25px rgb(115, 113, 173);;
+        box-shadow: 2px 4px 25px rgb(115, 113, 173);
+        ;
     }
 }
 
@@ -346,20 +332,6 @@ nav a:active {
 
 /* Media queries */
 
-@media only screen and (min-width: 1450px) {
-    #hello {
-        margin-left: 10vw;
-    }
-    
-    #my-name {
-        margin-left: 15vw;
-    }
-    
-    #me {
-        margin-left: 20vw;
-    }
-}
-
 @media only screen and (min-width: 1280px) and (max-width: 1350px) {
     .images2 {
         margin: 30px 25px 50px 25px;
@@ -371,7 +343,7 @@ nav a:active {
         flex-direction: column;
         align-items: start;
         position: fixed;
-        background-color: rgba(2, 4, 5, 0.75); 
+        background-color: rgba(2, 4, 5, 0.75);
         backdrop-filter: blur(20px);
         opacity: 1;
         padding: 30px 30px 30px 30px;
@@ -381,14 +353,17 @@ nav a:active {
         right: 0px;
         top: 100px;
     }
+
     nav a:hover {
         padding: 0px 1rem;
         font-size: 1.5rem;
     }
+
     nav a:active {
         padding: 0px 1rem;
         font-size: 1.5rem;
     }
+
     #backdropFilter {
         position: fixed;
         background: transparent;
@@ -400,16 +375,18 @@ nav a:active {
         z-index: 4;
         display: none;
     }
-    
+
     #list-menu {
         display: block;
     }
+
     #list-menu:hover {
         cursor: pointer;
         filter: opacity(0.5) drop-shadow(0 0 0 rgba(55, 210, 230, 1));
         width: 110px;
         right: 4.5vw;
     }
+
     #list-menu:active {
         filter: none;
         width: 100px;
@@ -434,9 +411,9 @@ nav a:active {
     header h2 a {
         font-size: 1.8rem;
         padding-left: 5vw;
-        width: 140px;   
+        width: 140px;
     }
- 
+
     header h2 a:active {
         padding-left: 5vw;
     }
@@ -444,9 +421,11 @@ nav a:active {
     #list-menu {
         right: 5vw
     }
+
     #list-menu:hover {
         right: 4.5vw
     }
+
     #list-menu:active {
         right: 5vw
     }
@@ -461,14 +440,17 @@ nav a:active {
         width: 350px;
         height: 350px;
     }
+
     .images2:active {
         width: 330px;
         height: 330px;
     }
+
     .images2 h3,
     .images2 p {
         padding: 0px;
     }
+
     .images2 p {
         font-size: 0.9rem;
     }
@@ -476,6 +458,7 @@ nav a:active {
     #contact p {
         font-size: 1.5rem;
     }
+
     #contact a:active {
         font-size: 1.3rem;
     }
@@ -485,18 +468,23 @@ nav a:active {
     header h2 a {
         width: 90px;
     }
+
     nav {
         padding: 10px 10px 10px 10px;
     }
+
     nav a {
         font-size: 1.3rem;
     }
+
     nav a:hover {
         font-size: 1.3rem;
     }
+
     nav a:active {
         font-size: 1.3rem;
     }
+
     #backdropFilter {
         height: 138px;
         width: 200px;
