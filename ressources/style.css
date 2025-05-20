@@ -400,13 +400,6 @@ nav a:active {
     }
 }
 
-@media only screen and (max-width: 720px) {
-    .images {
-        padding: 50px 52px;
-        width: 140px;
-    }
-}
-
 @media only screen and (max-width: 700px) {
     header h2 a {
         font-size: 1.8rem;
