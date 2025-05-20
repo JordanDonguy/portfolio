@@ -425,10 +425,6 @@ nav a:active {
 }
 
 @media only screen and (max-width: 450px) {
-    .images {
-        padding: 40px 15px;
-    }
-
     .images2 {
         width: 350px;
         height: 350px;
