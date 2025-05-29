@@ -248,8 +248,7 @@ nav a:active {
     justify-content: space-evenly;
     border: 1px solid white;
     padding: 15px;
-    margin-bottom: 50px;
-    margin-top: 30px;
+    margin: 30px 30px 50px;
     border-radius: 1rem;
 }
 
@@ -261,21 +260,12 @@ nav a:active {
     .images2:hover {
         width: 420px;
         height: 420px;
-        margin-top: 20px;
-        margin-bottom: 40px;
+        margin: 20px 25px 40px;
         transition-duration: 100ms;
         cursor: pointer;
         box-shadow: 2px 4px 25px rgb(115, 113, 173);
         ;
     }
-}
-
-.images2:active {
-    width: 380px;
-    height: 380px;
-    box-shadow: 2px 2px 15px rgb(115, 113, 173);
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 /* Contact section */
@@ -332,12 +322,6 @@ nav a:active {
 
 /* Media queries */
 
-@media only screen and (min-width: 1280px) and (max-width: 1350px) {
-    .images2 {
-        margin: 30px 25px 50px 25px;
-    }
-}
-
 @media only screen and (max-width: 950px) {
     nav {
         flex-direction: column;
@@ -391,12 +375,6 @@ nav a:active {
         filter: none;
         width: 100px;
         right: 5vw;
-    }
-}
-
-@media only screen and (min-width: 850px) and (max-width: 950px) {
-    .images2 {
-        margin: 30px 25px 50px 25px;
     }
 }
 
