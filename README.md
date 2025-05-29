@@ -1,12 +1,37 @@
-# Portfolio
-J'ai créé mon site portfolio afin d'y lister mes compétences en développement informatique ainsi que pour partager quelques projets que j'ai réalisé.
-## Informations générales
-Le site est divisé en 4 parties :
-- La partie "à propos" qui sert à me présenter
-- La partie "compétences" où je liste les différents outils et technologies de développement que je sais utiliser
-- La partie "projets" met en avant 3 projets que j'ai réalisé
-- La partie "contact" où vous pouvez trouver mes coordonnées pour me contacter
-## Technologies utilisées
-Pour réaliser ce site portfolio j'ai utilisé HTML5, CSS et JavaScript.
-## Lien vers le site
-Pour visiter ce site, vous pouvez vous rendre à l'adresse suivante : [https://jordandonguy.github.io/portfolio/](https://jordandonguy.github.io/portfolio/)
+# 🌐 Portfolio
+
+Welcome to my personal **portfolio website**, where I showcase my skills as a software developer and highlight some of the projects I've built. It’s a space to reflect my growth, share my work, and provide an easy way to get in touch!
+
+---
+
+## 📄 General Information
+
+The site is divided into **four main sections**:
+
+- 🧑‍💼 **About** — A short introduction about who I am and my background
+- 🛠️ **Skills** — A list of tools, technologies, and programming languages I'm proficient with
+- 🚀 **Projects** — A spotlight on three selected projects I’ve developed
+- 📬 **Contact** — Where you’ll find my contact details to reach out
+
+---
+
+## 🧰 Technologies Used
+
+This portfolio was created using:
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+
+Simple, clean, and fully responsive!
+
+---
+
+## 🔗 Visit the Website
+
+You can check out the live portfolio here:  
+👉 [https://jordandonguy.github.io/portfolio/](https://jordandonguy.github.io/portfolio/)
+
+---
+
+Thanks for visiting! 😊 Feel free to reach out with feedback or collaboration ideas.
