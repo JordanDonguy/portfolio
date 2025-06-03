@@ -6,22 +6,31 @@
 
 html,
 body {
+    overscroll-behavior: none;
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
-    scroll-padding-top: 4rem;
 }
 
 html {
-    font-family: 'Parkinsans', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 body {
-    background-color: black;
+    background-color: #1a2224;
 }
 
 a {
     text-decoration: none;
     color: rgb(230, 240, 255);
+}
+
+a:focus,
+a:active {
+    background-color: transparent;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 header {
@@ -41,47 +50,24 @@ header {
     border-bottom: 2px solid rgba(61, 74, 89, 0.65);
 }
 
-header h2 a {
-    display: block;
-    padding-left: 5vw;
-    font-size: 2rem;
-    color: rgba(230, 240, 255, 1);
-    opacity: 0;
-    transition: opacity 2.5s;
-    font-weight: 400;
-}
-
-@media (hover: hover) {
-    header h2 a:hover {
-        color: rgba(55, 210, 230, 0.864);
-        font-size: 2.2rem;
-        transition-duration: 150ms;
-        padding-left: 4.5vw;
-    }
-}
-
-header h2 a:active {
-    color: rgba(38, 142, 168, 0.811);
-    font-size: 2.05rem;
-    padding-left: 5vw;
-}
-
 /* Nav */
 
-nav {
+#navbar {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style-type: none;
+    font-size: 0rem;
     opacity: 0;
-    transition: opacity 2.5s;
+    transition: opacity 2.5s, font-size 1.5s;
+    
 }
 
 nav a {
-    font-size: 1.5rem;
     display: inline-block;
     transform-origin: center;
+    
 }
 
 nav a:hover {
@@ -100,7 +86,6 @@ nav a:active {
 #a-propos {
     scroll-snap-align: start;
     display: flex;
-    padding-top: 4rem;
     min-height: 100vh;
     width: 100%;
     opacity: 0;
@@ -109,11 +94,14 @@ nav a:active {
     background: -webkit-linear-gradient(to top, #1a2224, #000000);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #1a2224, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transition: opacity 1.5s;
+    border-bottom: 2px solid rgba(61, 74, 89, 0.65);
 }
 
 .présentation {
     width: 100%;
+    height: 100vh;
     transition: width 1.25s;
     display: flex;
     flex-direction: column;
@@ -124,16 +112,30 @@ nav a:active {
 }
 
 #Hi {
-    width: 100%;
+    max-width: 80%;
+    line-height: 4rem;
     transition: font-size 1.5s;
     text-align: center;
     backdrop-filter: blur(10px);
-    padding: 0px 50px;
-    margin-bottom: 12rem;
+    margin: 0px auto 12rem;
     font-size: 0rem;
-      color: transparent;
-    background: linear-gradient(to right, rgb(88, 201, 143), rgb(234, 240, 246) 50%, rgb(37, 59, 171));
-     -webkit-background-clip: text;
+    color: transparent;
+    background: linear-gradient(to right, rgb(88, 201, 143) 10%, rgb(234, 240, 246) 50%, rgb(91, 109, 196));
+    -webkit-background-clip: text;
+    animation: growPulse 4s ease-in-out infinite;
+    overflow: hidden;
+}
+
+@keyframes growPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .présentation h1,
@@ -141,40 +143,70 @@ nav a:active {
     font-weight: 300;
 }
 
-#down-arrow {
-    font-size: 5rem;
+.first-arrow {
     position: absolute;
-    color: transparent;
-    background: linear-gradient(to right, rgb(218, 225, 231) 30%, rgb(69, 89, 189));
-     -webkit-background-clip: text;
-    top: 83vh;
-    left: 50%;
-    transform: translateX(-50%);
-    transition-duration: 100ms;
+    top: calc(100vh - 9rem);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    animation: bounce 2s infinite;
+    background-color: transparent;
+}
+
+.down-arrows {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 3rem auto 0px;
+    animation: bounce 2s infinite;
+}
+
+.up-arrows {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0px auto 3rem;
+    animation: bounce 2s infinite;
+}
+
+.arrow-img {
     opacity: 0;
-    transition: opacity 3s;
-    transform-origin: left;
+    width: 0%;
+    filter: invert(0.95);
+    transition: width 1.5s, opacity 2.5s;
+    animation: growPulse 4s ease-in-out infinite;
 }
 
-#down-arrow:hover {
-    transform: scale(1.15) translateX(-50%);;
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
 }
 
-/* Compétences section */
+/* Skills section */
 
-#compétences {
+#skills {
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    z-index: 2;
-    padding-top: 50px;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
     background-color: #1a2224;
-    padding-bottom: 50px;
+    opacity: 0;
+    transition: opacity 1.5s;
+    border-bottom: 2px solid rgba(61, 74, 89, 0.65);
 }
 
-#compétences h2 {
+#skills h2 {
     color: rgb(200, 220, 240);
     z-index: 3;
     text-align: center;
@@ -195,83 +227,105 @@ nav a:active {
 .images {
     width: 16rem;
     padding: 3rem 3rem;
-    filter: drop-shadow(4px 4px 4px);
+    filter: drop-shadow(4px 4px 4px rgb(18, 18, 18));
     z-index: 4;
+    transform: scale(0.5);
+    transition: transform 2s;
 }
 
-/* Projets section */
+/* Projects section */
 
-#projets {
+#projects {
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: start;
+    align-items: center;
     height: 100%;
+    width: 100%;
     z-index: 1;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
     background: #000000;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #1a2224, #000000);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #1a2224, #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0;
+    transition: opacity 1.5s;
+    border-bottom: 2px solid rgba(61, 74, 89, 0.65);
 }
 
-#projets h2 {
+#projects h2 {
     color: white;
     z-index: 3;
     text-align: center;
     font-size: calc(2rem + 1vw);
-    padding-bottom: 30px;
+    padding-bottom: 5rem;
 }
 
-.projets-container {
-    width: 100%;
+.project-container {
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: start;
     align-items: center;
-    z-index: 2;
+    margin-bottom: 7rem;
+    padding: 15px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px 2px rgb(118, 117, 150);
+    transform: scale(0.5);
+    transition: box-shadow 125ms, transform 1.5s;
 }
 
-.images2 h3,
-.images2 p {
+.projects-text {
+    width: 50%;
+}
+
+#projects-b {
+    flex-direction: row-reverse;
+}
+
+.project-container h3,
+.project-container p {
     color: white;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 1.75rem;
 }
 
-.images2 h3 {
-    font-size: 2rem;
+.project-container h3 {
+    font-size: 2.5rem;
+    animation: growPulse 4s ease infinite;
+    ;
 }
 
-.images2 {
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border: 1px solid white;
-    padding: 15px;
-    margin: 30px 30px 50px;
-    border-radius: 1rem;
+.project-container p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 2.25rem;
+    width: 90%;
+    margin: 0px 5%;
 }
 
-.images2 img {
-    width: 100%;
+.project-container img {
+    width: 50%;
+    border-radius: 2rem;
 }
 
 @media (hover: hover) {
-    .images2:hover {
-        width: 420px;
-        height: 420px;
-        margin: 20px 20px 40px;
-        transition-duration: 100ms;
+    .project-container:hover {
         cursor: pointer;
-        box-shadow: 2px 4px 25px rgb(115, 113, 173);
+        box-shadow: 0px 0px 25px 4px rgb(118, 117, 150);
         ;
     }
+}
+
+.project-container:active {
+    box-shadow: 0px 0px 7px 2px rgb(118, 117, 150);
+    ;
+    transform: scale(0.9);
 }
 
 /* Contact section */
@@ -280,6 +334,10 @@ nav a:active {
     background-color: black;
     color: rgb(200, 235, 240);
     scroll-snap-align: start;
+    opacity: 0;
+    transition: opacity 1.5s;
+    display: flex;
+    flex-direction: column;
 }
 
 .coordonées {
@@ -287,6 +345,10 @@ nav a:active {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+#contact-arrow {
+    margin: 1.5rem 0px;
 }
 
 #contact h2 {
@@ -301,7 +363,7 @@ nav a:active {
     padding: 30px;
 }
 
-#contact a {
+.mail-link {
     color: white;
     text-decoration: underline;
     background-color: rgb(8, 25, 22);
@@ -310,7 +372,7 @@ nav a:active {
 }
 
 @media (hover: hover) {
-    #contact a:hover {
+    .mail-link:hover {
         font-size: 2rem;
         transition-duration: 100ms;
         box-shadow: 2px 4px 10px #020216;
@@ -320,7 +382,7 @@ nav a:active {
     }
 }
 
-#contact a:active {
+.mail-link:active {
     font-size: 1.8rem;
     color: rgba(38, 142, 168, 0.811);
     padding: 10px;
@@ -330,10 +392,26 @@ nav a:active {
 
 @media only screen and (max-width: 950px) {
     header {
-    width: 90%;
-    margin: auto 5%;
+        width: 90%;
+        margin: auto 5%;
     }
 
+    #projects-a,
+    #projects-b {
+        flex-direction: column;
+    }
+
+    .project-container {
+        padding: 15px 0px;
+        box-shadow: 0px 0px 8px 2px rgb(118, 117, 150);
+    }
+
+    .project-container,
+    .project-container img,
+    .projects-text {
+        width: 100%;
+        border-radius: 0px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -341,39 +419,11 @@ nav a:active {
         font-size: 10px;
     }
 
-    nav {
-        width: 80%;
+    #navbar {
+        width: 85%;
     }
 
     #Hi {
-        margin-bottom: 15rem;
-    }
-
-    .images2 {
-        width: 350px;
-        height: 350px;
-    }
-
-    .images2:active {
-        width: 330px;
-        height: 330px;
-    }
-
-    .images2 h3,
-    .images2 p {
-        padding: 0px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-
-    .images2 {
-        height: 320px;
-        width: 280px;
-        margin: 30px 0px 50px 0px;
-    }
-
-    .images2 h3 {
-        font-size: 1.6rem;
+        margin-bottom: 14rem;
     }
 }

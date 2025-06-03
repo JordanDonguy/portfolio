@@ -9,85 +9,116 @@
     <link href="./ressources/style.css" rel="stylesheet">
     <link rel="icon" href="./ressources/img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <nav id="navbar">
-        <li><a href="#" class="nav-link">About</a></li>
-        <li><a href="#compétences" class="nav-link">Skills</a></li>
-        <li><a href="#projets" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-    </nav>
-</header>
-<main>
+    <header>
+        <nav id="navbar">
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </nav>
+    </header>
+    <main>
 
-    <section class="a-propos" id="a-propos">
-        <div class="background"></div>
-        <div class="présentation" id="présentation">
-            <h1 id="Hi">Hi, I'm Jordan,<br>Let's build some awesome apps together !</h1>
-        </div>
-        <a href="#compétences" id="down-arrow">▿</a>
-    </section>
-    
-    <section id="compétences">
-        <h2>Skills :</h2>
-        <div class="images-container">
-            <img class="images" id="html5-img" src="./ressources/img/logo/HTML5.png"\>
-            <img class="images" id="css-img" src="./ressources/img/logo/CSS.png"\>
-            <img class="images" id="js-img" src="./ressources/img/logo/JS.png"\>
-            <img class="images" id="react-img" src="./ressources/img/logo/React.png"\>
-            <img class="images" id="redux-img" src="./ressources/img/logo/redux.png"\>
-            <img class="images" id="nodeJs-img" src="./ressources/img/logo/NodeJS.png"\>
-            <img class="images" id="expressJs-img" src="./ressources/img/logo/expressjs.png"\>
-            <img class="images" id="postgreSql-img" src="./ressources/img/logo/psql.png"\>
-            <img class="images" id="git-img" src="./ressources/img/logo/Git.png"\>
-            <img class="images" id="github-img" src="./ressources/img/logo/Github.png"\>
-            <img class="images" id="vscode-img" src="./ressources/img/logo/VScode.png"\>
-        </div>
-    </section>
+        <section class="a-propos" id="a-propos">
+            <div class="présentation" id="présentation">
+                <h1 id="Hi">Hi, I'm Jordan,<br>Let's build some awesome apps together !</h1>
+            </div>
+            <a href="#skills" class="first-arrow">
+                <img class="arrow-img" src="./ressources/chevron-down.svg" />
+            </a>
+        </section>
 
-    <section id="projets">
-        <h2>Projects :</h2>
-        <div class="projets-container">
-            <a href="https://guitar-shop-frontend.netlify.app/" target="_blank">
-            <div class="images2">
-                <img id="guitar-shop" src="./ressources/img/projets/guitar-shop.png"\>
-                <h3>Guitar Shop</h3>
-                <p>A full-stack e-commerce modern and responsive web application.<br>Tech stack : React, Express.js, PostgreSQL</p>
-            </div></a>
-            <a href="https://jordandonguy-minireddit.netlify.app/" target="_blank">
-                <div class="images2">
-                    <img id="mini-reddit" src="./ressources/img/projets/mini-reddit.png"\>
+        <section id="skills">
+            <a href="#" class="up-arrows">
+                <img class="arrow-img" src="./ressources/chevron-up.svg" />
+            </a>
+
+            <h2>Skills :</h2>
+            <div class="images-container">
+                <img class="images" id="html5-img" src="./ressources/img/logo/HTML5.png" \>
+                <img class="images" id="css-img" src="./ressources/img/logo/CSS.png" \>
+                <img class="images" id="js-img" src="./ressources/img/logo/JS.png" \>
+                <img class="images" id="react-img" src="./ressources/img/logo/React.png" \>
+                <img class="images" id="redux-img" src="./ressources/img/logo/redux.png" \>
+                <img class="images" id="nodeJs-img" src="./ressources/img/logo/NodeJS.png" \>
+                <img class="images" id="expressJs-img" src="./ressources/img/logo/expressjs.png" \>
+                <img class="images" id="postgreSql-img" src="./ressources/img/logo/psql.png" \>
+                <img class="images" id="git-img" src="./ressources/img/logo/Git.png" \>
+                <img class="images" id="github-img" src="./ressources/img/logo/Github.png" \>
+                <img class="images" id="vscode-img" src="./ressources/img/logo/VScode.png" \>
+
+                <a href="#projects" class="down-arrows">
+                    <img class="arrow-img" src="./ressources/chevron-down.svg" />
+                </a>
+            </div>
+
+        </section>
+
+        <section id="projects">
+            <a href="#skills" class="up-arrows">
+                <img class="arrow-img" src="./ressources/chevron-up.svg" />
+            </a>
+
+            <h2>Projects :</h2>
+
+            <a href="https://guitar-shop-frontend.netlify.app/" class="project-container" id="projects-a"
+                target="_blank">
+                <img id="guitar-shop" src="./ressources/img/projets/guitar-shop.png" \>
+                <div class="projects-text">
+                    <h3>Guitar Shop</h3>
+                    <p>A full-stack e-commerce modern and responsive web application.<br>Tech stack : React, Express.js,
+                        PostgreSQL</p>
+                </div>
+            </a>
+            <a href="https://jordandonguy-minireddit.netlify.app/" class="project-container" id="projects-b"
+                target="_blank">
+                <img id="mini-reddit" src="./ressources/img/projets/mini-reddit.png" \>
+                <div class="projects-text">
                     <h3>Mini Reddit</h3>
                     <p>A simplified version of Reddit. Uses Reddit API.<br>Tech stack : React & Redux<br><br></p>
-                </div></a>
-        </div>
-        <div class="projets-container">
-            <a href="https://jordandonguy.github.io/jamming/" target="_blank">
-            <div class="images2">
-                <img id="jamming" src="./ressources/img/projets/jamming.png"\>
-                <h3>Jamming</h3>
-                <p>A web app that you can use to create Spotify playlist. Uses Spotify API.<br>Tech stack : React<br><br></p>
-            </div></a>
-            <a href="https://jordandonguy.github.io/film-finder/" target="_blank">
-            <div class="images2">
-                <img id="film-finder" src="./ressources/img/projets/film-finder.png"\>
-                <h3>Film Finder</h3>
-                <p>A website that generates random movies based on a selected genre. Uses TMDB API.<br>Tech stack : JavaScript</p>
-            </div></a>
-        </div>
-    </section>
+                </div>
+            </a>
 
-    <section id="contact">
-        <h2>Contact :</h2>
-        <div class="coordonées">
-            <p><a href="mailto:jordan.donguy@gmail.com">jordan.donguy@gmail.com</a></p>
-            <p>+33 6 49 26 56 38</p>
-        </div>
-    </section>
-</main>
+            <a href="https://jordandonguy.github.io/jamming/" class="project-container" id="projects-a" target="_blank">
+                <img id="jamming" src="./ressources/img/projets/jamming.png" \>
+                <div class="projects-text">
+                    <h3>Jamming</h3>
+                    <p>A web app that you can use to create Spotify playlist. Uses Spotify API.<br>Tech stack :
+                        React<br><br></p>
+                </div>
+            </a>
+            <a href="https://jordandonguy.github.io/film-finder/" class="project-container" id="projects-b"
+                target="_blank">
+                <img id="film-finder" src="./ressources/img/projets/film-finder.png" \>
+                <div class="projects-text">
+                    <h3>Film Finder</h3>
+                    <p>A website that generates random movies based on a selected genre. Uses TMDB API.<br>Tech stack :
+                        JavaScript</p>
+                </div>
+            </a>
+
+        </section>
+
+        <section id="contact">
+            <a href="#" class="up-arrows" id="contact-arrow">
+                <img class="arrow-img" src="./ressources/chevron-up.svg" />
+            </a>
+
+            <h2>Contact :</h2>
+
+            <div class="coordonées">
+                <p><a class="mail-link" href="mailto:jordan.donguy@gmail.com">jordan.donguy@gmail.com</a></p>
+                <p>+33 6 49 26 56 38</p>
+            </div>
+        </section>
+    </main>
 
 </body>
 
