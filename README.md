@@ -8,9 +8,9 @@ Welcome to my personal **portfolio website**, where I showcase my skills as a so
 
 The site is divided into **four main sections**:
 
-- 🧑‍💼 **About** — A short introduction about who I am and my background
+- 🧑‍💼 **About** — A short introduction message
 - 🛠️ **Skills** — A list of tools, technologies, and programming languages I'm proficient with
-- 🚀 **Projects** — A spotlight on three selected projects I’ve developed
+- 🚀 **Projects** — A spotlight on four selected projects I’ve developed
 - 📬 **Contact** — Where you’ll find my contact details to reach out
 
 ---
