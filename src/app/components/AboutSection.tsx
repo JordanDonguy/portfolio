@@ -1,11 +1,12 @@
 export default function AboutSection() {
   return (
-    <section id="about" className="px-5 lg:px-0">
-      <div className="min-h-screen py-24 max-w-7xl mx-auto text-center flex flex-col items-center justify-around">
+    <section id="about" className="relative min-h-screen px-5 lg:px-0">
+      <img src="/bg-2.svg" className="absolute z-[-1] w-full h-full object-cover" />
+      <div className="pt-24 max-w-7xl mx-auto text-center flex flex-col items-center justify-around">
 
         <h2 className="text-4xl font-bold mb-8">About Me</h2>
 
-        <div className="bg-zinc-900 p-12 rounded-3xl text-gray-300 xl:w-6xl border-y-2 border-zinc-700">
+        <div className="bg-[rgba(24,24,27,0.7)] p-12 rounded-3xl text-gray-300 xl:w-6xl border-2 border-zinc-700 backdrop-blur-sm">
           <article className="text-lg/10 max-w-4xl mx-auto">
             <h3 className="text-2xl pb-6 text-center text-cyan-500 font-bold">👋 Hey there!</h3>
             <p>I’m Jordan, a <span className="text-white font-bold">full-stack developer</span> wrapping up a <span className="text-white font-bold">remote Bachelor’s degree</span> from a Paris based school named O'Clock.

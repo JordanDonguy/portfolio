@@ -3,11 +3,11 @@ import { CircleArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="max-w-screen overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center pt-24">
+    <section id="hero" className="relative max-w-screen overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center">
+      <img src="/bg-1.svg" className="absolute z-[-1] w-full h-full object-cover" />
+      <div className="py-12 px-8 border-2 border-zinc-700 rounded-4xl flex flex-col items-center w-2xl lg:w-6xl backdrop-blur-xl">
 
-      <div className="py-12 px-8 border-2 border-zinc-700 rounded-4xl flex flex-col items-center w-2xl lg:w-6xl">
-
-        <h1 className="text-5xl/20 text- text-white font-bold pb-10 animate-grow-subtle">
+        <h1 className="text-5xl/20 text-white font-bold pb-10 animate-grow-subtle">
           Hi, I'm Jordan 👋,<br></br>
           <span className="bg-gradient-to-l from-blue-400 to-gray-100 bg-clip-text text-transparent">Let's make awesome apps together!</span>
         </h1>
@@ -24,9 +24,9 @@ export default function HeroSection() {
 
       </div>
 
-      <a href="#about" className="z-10 mt-25 mb-5 animate-subtle-bounce hover:scale-110 hover:cursor-pointer duration-150">
+     {/*  <a href="#about" className="z-10 mt-25 mb-5 animate-subtle-bounce hover:scale-110 hover:cursor-pointer duration-150">
         <CircleArrowDown size={64} strokeWidth={1} color="rgb(113,113,122)" />
-      </a>
+      </a> */}
     </section>
   )
 }
