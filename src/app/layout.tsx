@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import "./styles/globals.css";
 import Navbar from "./components/Navbar";
+import ScrollWrapper from "./components/ScrollWrapper";
 
 const comfortaa = Comfortaa({
   variable: "--font-comfortaa",
@@ -27,9 +28,9 @@ export default function RootLayout({
           <Navbar />
         </header>
 
-        <main className="w-full h-screen relative snap-y snap-proximity overflow-y-scroll scroll-smooth">
+        <ScrollWrapper>
           {children}
-        </main>
+        </ScrollWrapper>
 
       </body>
     </html>

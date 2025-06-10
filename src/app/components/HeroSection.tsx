@@ -3,7 +3,7 @@ import { CircleArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative w-full overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center snap-start">
+    <section id="home" className="relative w-full overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center snap-start">
       <img src="/bg-1.svg" className="absolute z-[-1] w-full h-full object-cover" />
       <div className="bg-glass mt-16 py-12 px-8 border-2 border-zinc-700 rounded-4xl flex flex-col items-center w-2xl lg:w-6xl">
 

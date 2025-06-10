@@ -1,8 +1,8 @@
 export default function AboutSection() {
   return (
-    <section id="about" className="relative w-full min-h-screen px-5 lg:px-0 snap-start">
-      <img src="/bg-1.svg" className="absolute z-[-1] w-full h-full object-cover transform scale-y-[-1]" />
-      <div className="pt-24 max-w-7xl mx-auto text-center flex flex-col items-center justify-around">
+    <section id="about" className="relative w-full min-h-screen snap-start">
+      <img src="/bg-1.svg" className="absolute z-[-1] w-full h-full object-cover scale-y-[-1]" />
+      <div className="pt-24 max-w-7xl mx-5 lg:mx-auto text-center flex flex-col items-center justify-around">
 
         <h2 className="text-4xl font-bold mb-8">About Me</h2>
 
