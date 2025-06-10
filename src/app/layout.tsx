@@ -23,11 +23,11 @@ export default function RootLayout({
       
       <body className={`${comfortaa.className} antialiased`}>
 
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[rgba(26,26,28,0.5)] backdrop-blur-md border-b-2 border-zinc-700 shadow-md">
+        <header className="fixed w-full top-0 left-0 right-0 z-50 bg-glass border-b-2 border-zinc-700 shadow-md">
           <Navbar />
         </header>
 
-        <main className="mx-auto relative">
+        <main className="w-full h-screen relative snap-y snap-proximity overflow-y-scroll scroll-smooth">
           {children}
         </main>
 

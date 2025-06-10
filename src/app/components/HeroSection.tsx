@@ -3,9 +3,9 @@ import { CircleArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative max-w-screen overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center">
+    <section id="hero" className="relative w-full overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center snap-start">
       <img src="/bg-1.svg" className="absolute z-[-1] w-full h-full object-cover" />
-      <div className="py-12 px-8 border-2 border-zinc-700 rounded-4xl flex flex-col items-center w-2xl lg:w-6xl backdrop-blur-xl">
+      <div className="bg-glass mt-16 py-12 px-8 border-2 border-zinc-700 rounded-4xl flex flex-col items-center w-2xl lg:w-6xl">
 
         <h1 className="text-5xl/20 text-white font-bold pb-10 animate-grow-subtle">
           Hi, I'm Jordan 👋,<br></br>
@@ -24,7 +24,7 @@ export default function HeroSection() {
 
       </div>
 
-     {/*  <a href="#about" className="z-10 mt-25 mb-5 animate-subtle-bounce hover:scale-110 hover:cursor-pointer duration-150">
+      {/* <a href="#about" className="z-10 absolute bottom-0 mb-15 animate-subtle-bounce hover:scale-110 hover:cursor-pointer duration-150">
         <CircleArrowDown size={64} strokeWidth={1} color="rgb(113,113,122)" />
       </a> */}
     </section>
