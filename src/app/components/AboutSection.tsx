@@ -8,7 +8,7 @@ export default function AboutSection() {
         <h2 className="text-4xl font-bold mb-8">About Me</h2>
 
         <div className="bg-glass px-2 md:px-12 py-8 rounded-3xl text-gray-300 xl:w-6xl border-2 border-zinc-700 2xl:py-12">
-          <article className="text-lg/10 max-w-6xl mx-auto 2xl:max-w-4xl">
+          <article className="text-md md:text-lg/10 max-w-6xl mx-auto 2xl:max-w-4xl">
             <h3 className="text-2xl pb-6 text-center text-cyan-500 font-bold">👋 Hey there!</h3>
             <p>I’m Jordan, a <span className="text-white font-bold">full-stack developer</span> wrapping up a <span className="text-white font-bold">remote Bachelor’s degree</span> from a Paris based school named O'Clock.
               I recently completed <span className="text-white font-bold">Codecademy’s Full-Stack Engineer</span> path and have been building with <span className="text-white font-bold">React, Node.js, and PostgreSQL</span>.
@@ -16,7 +16,7 @@ export default function AboutSection() {
               My goal is to work on <span className="text-white font-bold">modern tech stacks</span>, combining <span className="text-white font-bold">solid development</span> with <span className="text-white font-bold">smart user experiences</span>.</p>
           </article>
 
-          <article className="text-lg/10 pt-12 max-w-6xl mx-auto 2xl:max-w-4xl">
+          <article className="md:text-lg/10 pt-12 max-w-6xl mx-auto 2xl:max-w-4xl">
             <h3 className="text-2xl pb-6 text-center text-cyan-500 font-bold">📚 A bit of background</h3>
             <p>
               Before getting into development, I worked for <span className="text-white font-bold">several years</span> as an <span className="text-white font-bold">automotive electrician </span>

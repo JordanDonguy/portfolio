@@ -65,23 +65,21 @@ export default function ProjectsSection() {
     <section id="projects" className="relative w-full min-h-screen xl:h-screen">
       <img src="/img/left.svg" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3" />
       <img src="/img/right.svg" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3" />
-      <div className="max-w-full mx-auto h-full text-center pt-24 pb-24">
+      <div className="max-w-full mx-auto h-full text-center pt-24 xl:pb-24">
         <h2 className="text-4xl font-bold mb-8">Projects</h2>
 
         <Swiper
           modules={[Pagination, Navigation]}
-          loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
+          loop={projectList.length > 3}
+          pagination={projectList.length > 3 ? { clickable: true } : false}
+          navigation={projectList.length > 3}
           spaceBetween={40}
           slidesPerView={1.2}
           centeredSlides={true}
           className="!hidden md:!block w-full h-full "
         >
           {projectList.map(project =>
-            <SwiperSlide key={project.title} className="h-full min-h-[850px] xl:min-h-fit bg-glass rounded-3xl border-2 border-zinc-700 xl:mb-40">
+            <SwiperSlide key={project.title} className="h-auto min-h-[850px] xl:min-h-[600px] bg-glass rounded-3xl border-2 border-zinc-700 xl:mb-40">
               <ProjectCard
                 title={project.title}
                 img={project.img}
@@ -97,8 +95,10 @@ export default function ProjectsSection() {
 
         <div className="md:hidden w-full h-full">
           {projectList.map(project =>
-            <div key={project.title} className="mx-2 md:mx-auto h-full bg-glass rounded-3xl border-2 border-zinc-700 mb-16">
+            <div key={project.title} 
+            className={`mx-2 md:mx-auto h-full bg-glass rounded-3xl border-2 border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) && "mb-16"}`}>
               <ProjectCard
+                key={project.title}
                 title={project.title}
                 img={project.img}
                 img_mobile={project.img_mobile}

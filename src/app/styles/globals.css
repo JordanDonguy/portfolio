@@ -72,8 +72,8 @@ body {
 }
 
 .bg-glass2 {
-  background-color: rgba(60, 60, 82, 0.4);
-  backdrop-filter: blur(12px);
+  background-color: rgba(25, 25, 30, 0.8);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(12px);
 }
 

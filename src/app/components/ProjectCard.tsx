@@ -21,14 +21,14 @@ export default function ProjectCard({ title, img, img_mobile, description, tech_
           <a
             href={live_url}
             target="_blank"
-            className="h-12 flex items-center justify-center border-2 rounded-full bg-gradient-to-l from-blue-600 hover:cursor-pointer hover:scale-115 duration-150"
+            className="h-12 flex items-center justify-center border-2 rounded-full bg-gradient-to-l from-blue-600 hover:cursor-pointer hover:scale-115 active:scale-90 duration-150"
           >
             Live app
           </a>
           <a
             href={github_url}
             target="_blank"
-            className="h-12 text-center border-2 rounded-full flex justify-center items-center hover:cursor-pointer hover:scale-115 duration-150"
+            className="h-12 text-center border-2 rounded-full flex justify-center items-center hover:cursor-pointer hover:scale-115 active:scale-90 duration-150"
           >
             <img src="/img/logo/GitHub.svg" className="mr-2 h-6 w-6" />
             <p className="text-base h-5">GitHub</p>
@@ -44,8 +44,8 @@ export default function ProjectCard({ title, img, img_mobile, description, tech_
           <div>
             <h4 className='text-xl lg:text-2xl mb-4'>Tech stack</h4>
             <div className='flex flex-wrap w-full gap-4 2xl:gap-x-6'>
-              {tech_stack.map(badge =>
-                <img src={badge} className='h-6 2xl:h-8' />
+              {tech_stack.map((badge, index) =>
+                <img key={badge + index} src={badge} className='h-6 2xl:h-8' />
               )}
             </div>
           </div>

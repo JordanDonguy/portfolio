@@ -17,7 +17,7 @@ export default function Navbar() {
             data-scroll-to={id}
             className={`hover:text-blue-400 hover:cursor-pointer font-bold  border-neutral-700 h-full pr-5
               ${(sectionIds.findIndex(x => x === id) < (sectionIds.length - 1)) && "border-r-2"}
-              ${(activeSection === id) ? "text-cyan-500 underline underline-offset-29" : ""}`}
+              ${(activeSection === id) ? "text-cyan-500 underline underline-offset-28" : ""}`}
           >
             {id.charAt(0).toUpperCase() + id.slice(1)}
           </button>
