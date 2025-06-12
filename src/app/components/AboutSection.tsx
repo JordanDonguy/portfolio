@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section id="about" className="relative w-full min-h-screen snap-start">
+    <section id="about" className="relative w-full min-h-screen">
       <img src="/img/left.svg" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3" />
       <img src="/img/right.svg" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3" />
       <div className="pt-24 max-w-7xl text-center flex flex-col items-center justify-around mx-2 md:mx-5 lg:mx-auto ">

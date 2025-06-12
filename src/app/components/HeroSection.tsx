@@ -3,12 +3,12 @@ import { CircleArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative w-full overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center snap-start">
+    <section id="home" className="relative w-full overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center">
       <img src="/img/right.svg" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3"/>
       <img src="/img/left.svg" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3" />
       <div className="bg-glass mt-16 py-12 px-8 border-2 border-zinc-700 rounded-4xl flex flex-col items-center w-2xl lg:w-6xl">
 
-        <h1 className="text-5xl/20 text-white font-bold pb-10 animate-grow-subtle">
+        <h1 className="md:text-5xl/20 text-white font-bold pb-10 animate-grow-subtle">
           Hi, I'm Jordan 👋,<br></br>
           <span className="bg-gradient-to-l from-blue-400 to-gray-100 bg-clip-text text-transparent">Let's make awesome apps together!</span>
         </h1>

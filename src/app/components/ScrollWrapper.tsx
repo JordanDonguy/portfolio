@@ -12,7 +12,6 @@ export default function ScrollWrapper({ children }: { children: React.ReactNode 
 
     const scrollbar = Scrollbar.init(scrollRef.current, {
       damping: 0.08,
-      alwaysShowTracks: true
     });
 
     scrollbarInstance.current = scrollbar;

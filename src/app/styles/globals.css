@@ -66,7 +66,63 @@ body {
 }
 
 .bg-glass {
-  background-color: rgba(24,24,27,0.4);
+  background-color: rgba(24, 24, 27, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+.bg-glass2 {
+  background-color: rgba(60, 60, 82, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.swiper-pagination-bullet {
+  background-color: #c4c8ee !important;
+  opacity: 0.6;
+}
+
+.swiper-button-prev {
+  left: 10% !important;
+  transition-duration: 150ms;
+}
+
+.swiper-button-next {
+  right: 10% !important;
+  transition-duration: 150ms;
+}
+
+.swiper-button-prev:hover {
+  transform: scale(1.25);
+}
+
+.swiper-button-prev:active {
+  transform: scale(0.9);
+}
+
+.swiper-button-next:hover {
+  transform: scale(1.25);
+}
+
+.swiper-button-next:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 1280px) {
+  .swiper-button-prev {
+    left: 4.5% !important;
+  }
+
+  .swiper-button-next {
+    right: 4.5% !important;
+  }
+}
+
+.scroll-content {
+  overflow: hidden !important; /* optional: forces scrollbar hiding */
+}
+
+/* Hide smooth-scrollbar's own scrollbar */
+.scrollbar-track {
+  display: none !important;
 }

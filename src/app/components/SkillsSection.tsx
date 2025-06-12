@@ -5,10 +5,10 @@ export default function SkillsSection() {
   const toolsList = ["Git", "GitHub", "Netlify", "Vercel", "Railway", "Render", "Supabase"]
 
   return (
-    <section id="skills" className="relative w-full min-h-screen snap-start">
+    <section id="skills" className="relative w-full min-h-screen">
       <img src="/img/right.svg" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3" />
       <img src="/img/left.svg" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3" />
-      <div className="max-w-6xl mx-5 lg:mx-auto text-center pt-24 xl:max-w-7xl">
+      <div className="max-w-6xl mx-2 md:mx-5 lg:mx-auto text-center pt-24 xl:max-w-7xl">
         <h2 className="text-4xl font-bold mb-8">Skills</h2>
 
         <div className="bg-glass pt-6 pb-4 border-2 border-zinc-700 rounded-3xl">
