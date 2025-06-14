@@ -25,8 +25,8 @@ export default function ProjectsSection() {
   const projectList = [
     {
       title: "Guitar Shop",
-      img: "/img/projects/guitar-shop.png",
-      img_mobile: "/img/projects/guitar-shop-mobile.png",
+      img: "/img/projects/guitar-shop.webp",
+      img_mobile: "/img/projects/guitar-shop-mobile.webp",
       description: "A responsive e-commerce web app for browsing and purchasing guitars. Users can view product details, manage a cart, and check out. The app also features Google OAuth login, newsletter subscription and dynamic product filtering.",
       tech_stack: [reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, netlifyBadge, railwayBadge, supabaseBadge],
       live_url: "https://guitar-shop-frontend.netlify.app/",
@@ -34,8 +34,8 @@ export default function ProjectsSection() {
     },
     {
       title: "Mini Reddit",
-      img: "/img/projects/mini-reddit.png",
-      img_mobile: "/img/projects/mini-reddit-mobile.png",
+      img: "/img/projects/mini-reddit.webp",
+      img_mobile: "/img/projects/mini-reddit-mobile.webp",
       description: "A front-end web application built with React and Redux that mimics core features of Reddit. It fetches real-time content using the Reddit API, allowing users to browse subreddits, view posts, and explore comment threads. Designed to showcase API integration, state management, and responsive UI development. Deployed on Netlify.",
       tech_stack: [reactBadge, reduxBadge, netlifyBadge],
       live_url: "https://jordandonguy-minireddit.netlify.app/",
@@ -43,8 +43,8 @@ export default function ProjectsSection() {
     },
     {
       title: "Jamming",
-      img: "/img/projects/jamming.png",
-      img_mobile: "/img/projects/jamming-mobile.png",
+      img: "/img/projects/jamming.webp",
+      img_mobile: "/img/projects/jamming-mobile.webp",
       description: "A React application that lets users search for songs and create custom playlists using the Spotify Web API. Features include live track search, playlist editing, and direct playlist saving to the user's Spotify account (with OAuth). Built to demonstrate API integration, component-based architecture, and user authentication. Deployed on GitHub Pages.",
       tech_stack: [reactBadge],
       live_url: "https://jordandonguy.github.io/jamming/",
@@ -52,8 +52,8 @@ export default function ProjectsSection() {
     },
     {
       title: "Film Finder",
-      img: "/img/projects/film-finder.png",
-      img_mobile: "/img/projects/film-finder-mobile.png",
+      img: "/img/projects/film-finder.webp",
+      img_mobile: "/img/projects/film-finder-mobile.webp",
       description: "A movie search app built with React that uses the OMDb API to fetch film data based on user queries. Users can search for movies by title and view key details such as release year, genre, and plot summary. Designed to highlight API integration, dynamic rendering, and clean UI design. Deployed on GitHub Pages.",
       tech_stack: [htmlBadge, cssBadge, jsBadge],
       live_url: "https://jordandonguy.github.io/film-finder/",
@@ -79,7 +79,7 @@ export default function ProjectsSection() {
           className="!hidden md:!block w-full h-full "
         >
           {projectList.map(project =>
-            <SwiperSlide key={project.title} className="h-auto min-h-[850px] xl:min-h-[600px] bg-glass rounded-3xl border-2 border-zinc-700 xl:mb-40">
+            <SwiperSlide key={project.title} className="h-auto min-h-[850px] xl:min-h-fit bg-glass rounded-asym border border-zinc-700 xl:mb-40">
               <ProjectCard
                 title={project.title}
                 img={project.img}
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
         <div className="md:hidden w-full h-full">
           {projectList.map(project =>
             <div key={project.title} 
-            className={`mx-2 md:mx-auto h-full bg-glass rounded-3xl border-2 border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) && "mb-16"}`}>
+            className={`mx-2 md:mx-auto h-full bg-glass rounded-asym border border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) && "mb-16"}`}>
               <ProjectCard
                 key={project.title}
                 title={project.title}

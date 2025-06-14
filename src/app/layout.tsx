@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import "./styles/globals.css";
 import Navbar from "./components/Navbar";
-import ScrollWrapper from "./components/ScrollWrapper";
 
 const comfortaa = Comfortaa({
   variable: "--font-comfortaa",
@@ -24,13 +23,13 @@ export default function RootLayout({
       
       <body className={`${comfortaa.className} antialiased`}>
 
-        <header className="fixed w-full top-0 left-0 right-0 z-50 bg-glass border-b border-zinc-700 shadow-md">
+        <header className="fixed w-full top-0 left-0 right-0 z-50 bg-glass border-b border-zinc-700 shadow-md backdrop-blur-md">
           <Navbar />
         </header>
 
-        <ScrollWrapper>
+        <main className="w-full h-full">
           {children}
-        </ScrollWrapper>
+        </main>
 
       </body>
     </html>

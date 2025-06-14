@@ -3,11 +3,11 @@ export default function AboutSection() {
     <section id="about" className="relative w-full min-h-screen">
       <img src="/img/left.svg" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3" />
       <img src="/img/right.svg" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3" />
-      <div className="pt-24 max-w-7xl text-center flex flex-col items-center justify-around mx-2 md:mx-5 lg:mx-auto ">
+      <div className="pt-24 max-w-7xl text-center flex flex-col items-center justify-around  mx-2 md:mx-5 lg:mx-auto ">
 
         <h2 className="text-4xl font-bold mb-8">About Me</h2>
 
-        <div className="bg-glass px-2 md:px-12 py-8 rounded-3xl text-gray-300 xl:w-6xl border-2 border-zinc-700 2xl:py-12">
+        <div className="bg-glass px-2 md:px-12 py-8 rounded-asym text-gray-300 xl:w-6xl border-y border-zinc-700 2xl:py-12 backdrop-blur-sm">
           <article className="text-md md:text-lg/10 max-w-6xl mx-auto 2xl:max-w-4xl">
             <h3 className="text-2xl pb-6 text-center text-cyan-500 font-bold">👋 Hey there!</h3>
             <p>I’m Jordan, a <span className="text-white font-bold">full-stack developer</span> wrapping up a <span className="text-white font-bold">remote Bachelor’s degree</span> from a Paris based school named O'Clock.

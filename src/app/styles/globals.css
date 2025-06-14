@@ -19,6 +19,17 @@
   }
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgba(50,50,62,0.3) inset !important;
+  box-shadow: 0 0 0 1000px rgba(50,50,62,0.3) inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
 @layer utilities {
   @keyframes subtle-bounce {
 
@@ -56,7 +67,7 @@
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -66,15 +77,28 @@ body {
 }
 
 .bg-glass {
-  background-color: rgba(24, 24, 27, 0.4);
+  background-color: rgba(11, 11, 14, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.bg-glass2 {
+  background-color: rgba(11, 11, 14, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
-.bg-glass2 {
-  background-color: rgba(25, 25, 30, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(12px);
+.rounded-asym {
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 5rem;
+}
+
+.rounded-asym2 {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 .swiper-pagination-bullet {
@@ -118,11 +142,11 @@ body {
   }
 }
 
-.scroll-content {
-  overflow: hidden !important; /* optional: forces scrollbar hiding */
-}
-
-/* Hide smooth-scrollbar's own scrollbar */
-.scrollbar-track {
-  display: none !important;
+@media screen and (min-width: 768px) {
+  .rounded-asym2 {
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 5rem;
+  }
 }
