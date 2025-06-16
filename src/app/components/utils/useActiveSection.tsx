@@ -1,22 +1,35 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function useActiveSection(sectionIds: string[], threshold: number) {
   const [active, setActive] = useState<string>("");
+  const [fromTop, setFromTop] = useState<boolean | null>(null); // null = first load
+  const prevActiveRef = useRef<string | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
+        const visible = entries.filter(entry => entry.isIntersecting);
+        if (visible.length === 0) return;
+
+        const topMost = visible[0];
+        const currentId = topMost.target.id;
+
+        if (currentId !== prevActiveRef.current) {
+          if (prevActiveRef.current) {
+            const prevIndex = sectionIds.indexOf(prevActiveRef.current);
+            const currIndex = sectionIds.indexOf(currentId);
+            setFromTop(prevIndex < currIndex); // true = scrolling down
           }
-        });
+
+          prevActiveRef.current = currentId;
+          setActive(currentId);
+        }
       },
       {
-        root: document.querySelector("#scroll-container"), 
-        threshold: threshold || 0.6,
+        root: document.querySelector("#scroll-container"), // remove this if not using scroll container
+        threshold: threshold !== undefined ? threshold : 0.6,
       }
     );
 
@@ -26,7 +39,7 @@ export function useActiveSection(sectionIds: string[], threshold: number) {
     });
 
     return () => observer.disconnect();
-  }, [sectionIds]);
+  }, [sectionIds, threshold]);
 
-  return active;
+  return { activeSection: active, fromTop };
 }

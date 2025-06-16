@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
+import { SlideFromTopOrBottom } from "./animations/SlideFromTopOrBottom";
 import ProjectCard from './ProjectCard';
 
 export default function ProjectsSection() {
@@ -62,56 +63,55 @@ export default function ProjectsSection() {
   ]
 
   return (
-    <section id="projects" className="relative w-full min-h-screen xl:h-screen">
-      <img src="/img/left.svg" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3" />
-      <img src="/img/right.svg" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3" />
-      <div className="max-w-full mx-auto h-full text-center pt-24 xl:pb-24">
-        <h2 className="text-4xl font-bold mb-8">Projects</h2>
-
-        <Swiper
-          modules={[Pagination, Navigation]}
-          loop={projectList.length > 3}
-          pagination={projectList.length > 3 ? { clickable: true } : false}
-          navigation={projectList.length > 3}
-          spaceBetween={40}
-          slidesPerView={1.2}
-          centeredSlides={true}
-          className="!hidden md:!block w-full h-full "
-        >
-          {projectList.map(project =>
-            <SwiperSlide key={project.title} className="h-auto min-h-[850px] xl:min-h-fit bg-glass rounded-asym border border-zinc-700 xl:mb-40">
-              <ProjectCard
-                title={project.title}
-                img={project.img}
-                img_mobile={project.img_mobile}
-                description={project.description}
-                tech_stack={project.tech_stack}
-                live_url={project.live_url}
-                github_url={project.github_url}
-              />
-            </SwiperSlide>
-          )}
-        </Swiper>
-
-        <div className="md:hidden w-full h-full">
-          {projectList.map(project =>
-            <div key={project.title} 
-            className={`mx-2 md:mx-auto h-full bg-glass rounded-asym border border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) && "mb-16"}`}>
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                img={project.img}
-                img_mobile={project.img_mobile}
-                description={project.description}
-                tech_stack={project.tech_stack}
-                live_url={project.live_url}
-                github_url={project.github_url}
-              />
-            </div>
-          )}
+    <section id="projects" className="relative w-full min-h-screen xl:h-screen snap-start">
+      <img src="/img/left.svg" loading="lazy" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
+      <img src="/img/right.svg" loading="lazy" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
+      <SlideFromTopOrBottom>
+        <div className="max-w-full mx-auto h-full text-center pt-24 xl:pb-24">
+          <h2 className="text-4xl font-bold mb-8">Projects</h2>
+          <Swiper
+            modules={[Pagination, Navigation]}
+            loop={projectList.length > 3}
+            pagination={projectList.length > 3 ? { clickable: true } : false}
+            navigation={projectList.length > 3}
+            spaceBetween={40}
+            slidesPerView={1.2}
+            centeredSlides={true}
+            className="!hidden md:!block w-full h-full "
+          >
+            {projectList.map(project =>
+              <SwiperSlide key={project.title} className="h-auto min-h-[850px] xl:min-h-fit bg-glass rounded-asym border border-zinc-700 xl:mb-40">
+                <ProjectCard
+                  title={project.title}
+                  img={project.img}
+                  img_mobile={project.img_mobile}
+                  description={project.description}
+                  tech_stack={project.tech_stack}
+                  live_url={project.live_url}
+                  github_url={project.github_url}
+                />
+              </SwiperSlide>
+            )}
+          </Swiper>
+          <div className="md:hidden w-full h-full">
+            {projectList.map(project =>
+              <div key={project.title}
+              className={`mx-2 md:mx-auto h-full bg-glass rounded-asym border border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) && "mb-16"}`}>
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  img={project.img}
+                  img_mobile={project.img_mobile}
+                  description={project.description}
+                  tech_stack={project.tech_stack}
+                  live_url={project.live_url}
+                  github_url={project.github_url}
+                />
+              </div>
+            )}
+          </div>
         </div>
-
-      </div>
+      </SlideFromTopOrBottom>
     </section>
   )
 }

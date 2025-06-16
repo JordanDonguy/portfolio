@@ -52,11 +52,11 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
   }, [showForm]);
 
   return (
-    <form onSubmit={handleSubmit} className="h-full">
+    <form onSubmit={handleSubmit} className="w-full h-full">
       <fieldset className="h-full">
         <legend className={`${showForm && "hidden"} w-full text-center text-2xl mb-8`}>Contact Form</legend>
         <div
-          className={`${showForm ? "bg-glass2 md:border rounded-asym2" : "bg-glass border rounded-asym"} grid grid-cols-1 lg:grid-cols-2 h-full gap-8 border-zinc-700 col-span-2 p-2 md:p-6 relative`}
+          className={`${showForm ? "bg-glass2 md:border rounded-asym2" : "bg-glass border rounded-asym pb-10 lg:pb-8"} grid grid-cols-1 lg:grid-cols-2 h-full gap-8 border-zinc-700 col-span-2 p-4 md:p-6 relative`}
         >
           {showForm && (
             <button
@@ -68,7 +68,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
             </button>
           )}
 
-          <div className={`${showForm && "mt-10"} mt-4 col-span-1 flex flex-col`}>
+          <div className={`${showForm && "mt-10"} mt-8 col-span-1 flex flex-col`}>
             <label htmlFor="name" className="text-start mb-2">
               Name
             </label>
@@ -83,7 +83,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               onChange={handleChange}
             />
           </div>
-          <div className={`${showForm && "lg:mt-10"} lg:mt-4 col-span-1 flex flex-col`}>
+          <div className={`${showForm && "lg:mt-10"} lg:mt-8 col-span-1 flex flex-col`}>
             <label htmlFor="email" className="text-start mb-2">
               Email
             </label>
