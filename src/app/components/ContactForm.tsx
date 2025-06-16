@@ -56,9 +56,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
       <fieldset className="h-full">
         <legend className={`${showForm && "hidden"} w-full text-center text-2xl mb-8`}>Contact Form</legend>
         <div
-          className={`${
-            showForm ? "bg-glass2" : "bg-glass"
-          } grid grid-cols-1 lg:grid-cols-2 h-full gap-8 border border-zinc-700 rounded-asym2 col-span-2 p-2 md:p-6 relative`}
+          className={`${showForm ? "bg-glass2 md:border rounded-asym2" : "bg-glass border rounded-asym"} grid grid-cols-1 lg:grid-cols-2 h-full gap-8 border-zinc-700 col-span-2 p-2 md:p-6 relative`}
         >
           {showForm && (
             <button
@@ -124,9 +122,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               name="message"
               placeholder="Your message"
               required
-              className={`bg-[rgba(60,60,82,0.4)] min-h-32 2xl:min-h-40 rounded-lg px-4 py-2 ${
-                showForm && "resize-none"
-              }`}
+              className={`bg-[rgba(60,60,82,0.4)] min-h-32 2xl:min-h-40 rounded-lg px-4 py-2 ${showForm && "resize-none"
+                }`}
               value={formData.message}
               onChange={handleChange}
             />

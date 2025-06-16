@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-export function useActiveSection(sectionIds: string[]) {
+export function useActiveSection(sectionIds: string[], threshold: number) {
   const [active, setActive] = useState<string>("");
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export function useActiveSection(sectionIds: string[]) {
       },
       {
         root: document.querySelector("#scroll-container"), 
-        threshold: 0.6,
+        threshold: threshold || 0.6,
       }
     );
 

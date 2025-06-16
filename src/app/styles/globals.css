@@ -95,10 +95,16 @@ body {
 }
 
 .rounded-asym2 {
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .rounded-asym2 {
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 5rem;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -139,14 +145,5 @@ body {
 
   .swiper-button-next {
     right: 4.5% !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .rounded-asym2 {
-    border-top-left-radius: 5rem;
-    border-top-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 5rem;
   }
 }

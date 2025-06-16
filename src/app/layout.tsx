@@ -23,7 +23,7 @@ export default function RootLayout({
       
       <body className={`${comfortaa.className} antialiased`}>
 
-        <header className="fixed w-full top-0 left-0 right-0 z-50 bg-glass border-b border-zinc-700 shadow-md backdrop-blur-md">
+        <header className="fixed w-full h-16 top-0 left-0 right-0 z-50">
           <Navbar />
         </header>
 
