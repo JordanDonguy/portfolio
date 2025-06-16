@@ -36,8 +36,8 @@ export default function HeroSection() {
         )}
       </AnimatePresence>
 
-      <img src="/img/right.svg" loading="lazy" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <img src="/img/left.svg" loading="lazy" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
+      <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
+      <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <div className="relative duration-200 border-zinc-700 mt-16 rounded-asym w-full lg:w-6xl">
         {/* Animated borders */}
         <AnimatedHeroBorders showForm={showForm} />

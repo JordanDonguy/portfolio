@@ -9,8 +9,8 @@ import { MapPin } from 'lucide-react';
 export default function ContactSection() {
   return (
     <section id="contact" className="relative w-full min-h-screen pb-12 snap-start">
-      <img src="/img/right.svg" loading="lazy" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <img src="/img/left.svg" loading="lazy" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
+      <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
+      <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <div className="max-w-7xl mx-auto text-center pt-24">
         <h2 className="text-4xl font-bold mb-12 xl:mb-16">Contact</h2>
 

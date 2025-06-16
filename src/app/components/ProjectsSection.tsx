@@ -64,8 +64,8 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="relative w-full min-h-screen xl:h-screen snap-start">
-      <img src="/img/left.svg" loading="lazy" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <img src="/img/right.svg" loading="lazy" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
+      <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
+      <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <SlideFromTopOrBottom>
         <div className="max-w-full mx-auto h-full text-center pt-24 xl:pb-24">
           <h2 className="text-4xl font-bold mb-8">Projects</h2>
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
           <div className="md:hidden w-full h-full">
             {projectList.map(project =>
               <div key={project.title}
-              className={`mx-2 md:mx-auto h-full bg-glass rounded-asym border border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) && "mb-16"}`}>
+                className={`mx-2 md:mx-auto h-full bg-glass rounded-asym border border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) && "mb-16"}`}>
                 <ProjectCard
                   key={project.title}
                   title={project.title}

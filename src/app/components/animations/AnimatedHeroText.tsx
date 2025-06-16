@@ -20,11 +20,11 @@ export default function AnimatedHeroText({ showForm, handleFormButton }: Animate
       className={`${!showForm ? "backdrop-blur-sm bg-[rgba(11,11,14,0.5)]" : ""} duration-200 w-full py-12 px-8 rounded-asym flex flex-col items-center`}
     >
       <h1 className="text-3xl md:text-5xl/20 text-white font-bold pb-10 animate-grow-subtle">
-        Hi, I'm Jordan 👋,<br></br>
-        <span className="bg-gradient-to-l from-blue-400 to-gray-100 bg-clip-text text-transparent">Let's make awesome apps together!</span>
+        Hi, I&apos;m Jordan 👋,<br></br>
+        <span className="bg-gradient-to-l from-blue-400 to-gray-100 bg-clip-text text-transparent">Let&pos;s make awesome apps together!</span>
       </h1>
 
-      <p className="text-xl md:text-2xl/12 text- max-w-3xl pb-10">I'm a full-stack developer who loves to turn ideas into clean and modern apps that people enjoy using!</p>
+      <p className="text-xl md:text-2xl/12 text- max-w-3xl pb-10">I&apos;m a full-stack developer who loves to turn ideas into clean and modern apps that people enjoy using!</p>
 
       <div className="md:w-xl flex flex-col md:flex-row justify-between items-center duration-500 gap-8 md:gap-0">
         <button
