@@ -87,7 +87,6 @@ body {
 .bg-glass2 {
   background-color: rgba(11, 11, 14, 0.85);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .rounded-asym {

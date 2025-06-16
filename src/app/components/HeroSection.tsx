@@ -30,7 +30,7 @@ export default function HeroSection() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
             transition={{ type: "tween", duration: 0.15, ease: "easeInOut" }}
-            className={` duration-200 absolute z-10 max-w-5xl w-full h-full pt-16 md:pt-0 md:h-3/4`}>
+            className="will-change-transform will-change-opacity duration-200 absolute z-10 max-w-5xl w-full h-full pt-16 md:pt-0 md:h-3/4">
             <ContactForm showForm={showForm} handleFormButton={handleFormButton} />
           </motion.div>
         )}

@@ -21,7 +21,7 @@ export default function AnimatedHeroText({ showForm, handleFormButton }: Animate
     >
       <h1 className="text-3xl md:text-5xl/20 text-white font-bold pb-10 animate-grow-subtle">
         Hi, I&apos;m Jordan 👋,<br></br>
-        <span className="bg-gradient-to-l from-blue-400 to-gray-100 bg-clip-text text-transparent">Let&pos;s make awesome apps together!</span>
+        <span className="bg-gradient-to-l from-blue-400 to-gray-100 bg-clip-text text-transparent">Let&apos;s make awesome apps together!</span>
       </h1>
 
       <p className="text-xl md:text-2xl/12 text- max-w-3xl pb-10">I&apos;m a full-stack developer who loves to turn ideas into clean and modern apps that people enjoy using!</p>
