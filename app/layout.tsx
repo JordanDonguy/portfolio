@@ -11,6 +11,11 @@ const comfortaa = Comfortaa({
 export const metadata: Metadata = {
   title: "Jordan Donguy — Portfolio",
   description: "Full-stack developer portfolio website",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+  manifest: "/manifest.json",
 }
 
 export default function RootLayout({
