@@ -7,8 +7,8 @@ import { Menu } from "lucide-react";
 
 export default function Navbar() {
   const sectionIds = ["home", "about", "skills", "projects", "contact"];
-  const activeSection = useActiveSection(sectionIds, 0.6);
-  const activeSectionMobile = useActiveSection(sectionIds, 0.2);
+  const { activeSection } = useActiveSection(sectionIds, 0.6);
+  const { activeSection: activeSectionMobile } = useActiveSection(sectionIds, 0.2);
 
   const [menuVisibility, setMenuVisibility] = useState(false);
 
@@ -17,7 +17,10 @@ export default function Navbar() {
   };
 
   return (
-    <>
+    <motion.div
+      initial={{ y: "-100%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}>
       {/* Navbar Desktop */}
       <nav className="w-full h-16 hidden md:block bg-glass border-b border-zinc-700 shadow-md backdrop-blur-md">
         <div className="max-w-7xl h-full mx-auto flex justify-between items-center">
@@ -38,9 +41,9 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Navbar Mobile */}
+      {/* Navbar Mobile */}
       </nav>
-      <nav className="md:hidden h-16 border-b border-zinc-700 shadow-md">
+      <nav className="md:hidden w-full h-16 border-b border-zinc-700 shadow-md">
         <div className="w-full h-full bg-glass flex justify-between items-center">
           <a href="#home" className="font-bold text-xl text-cyan-500 pl-5 lg:pl-0">Portfolio</a>
           <button onClick={handleToggleVisibility} className="pr-5 hover:cursor-pointer">
@@ -51,11 +54,11 @@ export default function Navbar() {
         <AnimatePresence>
           {menuVisibility && (
             <motion.div
-              initial={{ x: "100%", opacity: 0}}
+              initial={{ x: "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: "100%", opacity: 0}}
+              exit={{ x: "100%", opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 28 }}
-              className="fixed w-full h-[100vh] top-16 md:hidden z-50">
+              className="fixed w-screen h-[100vh] top-16 md:hidden z-50">
               <ul className="flex flex-col w-full h-full justify-center items-center gap-16 bg-[rgba(11,11,16,0.98)]">
                 {sectionIds.map(id =>
                   <li key={id}>
@@ -74,6 +77,6 @@ export default function Navbar() {
           )}
         </AnimatePresence>
       </nav>
-    </>
+    </motion.div>
   )
 }
