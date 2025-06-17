@@ -5,10 +5,10 @@ export default function SkillsSection() {
   const languagesList = ["JavaScript", "TypeScript"];
   const frontEndList = ["Html5", "CSS", "React", "React Router", "Redux", "NextdotJs", "Tailwind CSS"];
   const backEndList = ["NodedotJs", "ExpressdotJs", "PostgreSQL"];
-  const toolsList = ["Git", "GitHub", "Netlify", "Vercel", "Railway", "Render", "Supabase"]
+  const toolsList = ["Git", "GitHub", "Netlify", "Vercel", "Railway", "Render", "Northflank", "Supabase"]
 
   return (
-    <section id="skills" className="relative w-full min-h-screen overflow-hidden snap-start">
+    <section id="skills" className="relative w-full min-h-screen overflow-hidden">
       <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <SlideFromRight>

@@ -21,16 +21,20 @@ export default function HeroSection() {
   }, [activeSection]);
 
   return (
-    <section id="home" className="relative w-full overflow-hidden mx-auto h-screen flex flex-col items-center text-center justify-center snap-start">
+    <section id="home" className="relative w-full overflow-hidden mx-auto h-[100svh] flex flex-col items-center text-center justify-center">
 
       <AnimatePresence>
         {showForm && (
           <motion.div
+            key="contact-form"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
-            transition={{ type: "tween", duration: 0.15, ease: "easeInOut" }}
-            className="will-change-transform will-change-opacity duration-200 absolute z-10 max-w-5xl w-full h-full pt-16 md:pt-0 md:h-3/4">
+            transition={{
+              scale: { type: "tween", duration: 0.3, ease: "easeInOut" },
+              opacity: { type: "tween", duration: 0.2, ease: "easeInOut" },
+            }}
+            className="will-change-transform will-change-opacity absolute z-10 max-w-5xl w-full h-full pt-16 md:pt-0 md:h-3/4">
             <ContactForm showForm={showForm} handleFormButton={handleFormButton} />
           </motion.div>
         )}

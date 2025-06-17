@@ -2,7 +2,7 @@ import { SlideFromLeft } from "./animations/SlideFromLeft"
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative w-full min-h-screen snap-y snap-start">
+    <section id="about" className="relative w-full min-h-screen">
       <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <SlideFromLeft>
