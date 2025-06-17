@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     }
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "contact@jordandonguy.com",
       to: "jordan.donguy@gmail.com",
       subject: `Contact form: ${subject}`,
       html: `

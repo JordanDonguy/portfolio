@@ -20,8 +20,8 @@ export default function ProjectsSection() {
   const expressBadge = "https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white&style=flat";
   const postgresqlBadge = "https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=flat";
   const netlifyBadge = "https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white&style=flat";
-  const railwayBadge = "https://img.shields.io/badge/Railway-0B0D0E?logo=railway&logoColor=white&style=flat";
   const supabaseBadge = "https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white&style=flat";
+  const northflankBadge = "/img/badge/Northflank.webp";
 
   const projectList = [
     {
@@ -29,7 +29,7 @@ export default function ProjectsSection() {
       img: "/img/projects/guitar-shop.webp",
       img_mobile: "/img/projects/guitar-shop-mobile.webp",
       description: "A responsive e-commerce web app for browsing and purchasing guitars. Users can view product details, manage a cart, and check out. The app also features Google OAuth login, newsletter subscription and dynamic product filtering.",
-      tech_stack: [reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, netlifyBadge, railwayBadge, supabaseBadge],
+      tech_stack: [reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, netlifyBadge, northflankBadge, supabaseBadge],
       live_url: "https://guitar-shop-frontend.netlify.app/",
       github_url: "https://github.com/JordanDonguy/guitar-shop-frontend",
     },
@@ -63,7 +63,7 @@ export default function ProjectsSection() {
   ]
 
   return (
-    <section id="projects" className="relative w-full min-h-screen xl:h-screen snap-start">
+    <section id="projects" className="relative w-full min-h-screen xl:h-screen">
       <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <SlideFromTopOrBottom>
