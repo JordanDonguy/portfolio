@@ -58,8 +58,8 @@ export default function Navbar() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 28 }}
-              className="fixed w-screen h-[100vh] top-16 md:hidden z-50">
-              <ul className="flex flex-col w-full h-full justify-center items-center gap-16 bg-[rgba(11,11,16,0.98)]">
+              className="fixed w-screen h-[100svh] top-16 md:hidden z-50">
+              <ul className="flex flex-col w-full h-full justify-center items-center gap-16 pb-16 bg-[rgba(11,11,16,0.98)]">
                 {sectionIds.map(id =>
                   <li key={id}>
                     <a
