@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm Jordan 👋,",
+    "intro": "Let's make awesome apps together!",
+    "presentation": "I'm a full-stack developer who loves to turn ideas into clean and modern apps that people enjoy using!",
+    "contact": "Say hello 👋",
+    "resume": "Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "presentation-title": "👋 Hey there!",
+    "background-title": "📚 A bit of background",
+    "presentation": "I’m Jordan, a <b>full-stack developer</b> wrapping up a <b>remote Bachelor’s degree</b> from a Paris based school named O&apos;Clock. I recently completed <b>Codecademy’s Full-Stack Engineer</b> path and have been building with <b>React, Node.js, and PostgreSQL</b>. Lately I’ve been diving into <b>Next.js</b> and planning to bring <b>AI tools</b> into some upcoming projects. My goal is to work on <b>modern tech stacks</b>, combining <b>solid development</b> with <b>smart user experiences</b>.",
+    "background": "Before getting into development, I worked for <b>several years</b> as an <b>automotive electrician </b> — installing new equipment, programming vehicles, and troubleshooting electrical systems. It’s where I built a strong foundation in <b>logical thinking, problem-solving, and teamwork</b>. Since then, I’ve shifted into full-stack web development, combining my <b>technical background</b> with a passion for <b>building digital tools and apps</b>. I'm always open to new opportunities, collaborations, or ideas — feel free to reach out!"
+  },
+  "skills": {
+    "title": "Skills",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Projects",
+    "live-app": "Live app",
+    "tech-stack": "Tech stack",
+    "guitar-shop": "A responsive e-commerce web app for browsing and purchasing guitars. Users can view product details, manage a cart, and check out. The app also features Google OAuth login, newsletter subscription and dynamic product filtering.",
+    "mini-reddit": "A front-end web application built with React and Redux that mimics core features of Reddit. It fetches real-time content using the Reddit API, allowing users to browse subreddits, view posts, and explore comment threads. Designed to showcase API integration, state management, and responsive UI development. Deployed on Netlify.",
+    "jamming": "A React application that lets users search for songs and create custom playlists using the Spotify Web API. Features include live track search, playlist editing, and direct playlist saving to the user's Spotify account (with OAuth). Built to demonstrate API integration, component-based architecture, and user authentication. Deployed on GitHub Pages.",
+    "film-finder": "A movie search app that uses the OMDb API to fetch data based on user input. The app displays movies randomly based on the selected genre. Designed to showcase API integration, dynamic rendering, and a clean UI design. Deployed on GitHub Pages."
+  },
+  "contact": {
+    "informations": "Contact Informations",
+    "form": "Contact form",
+    "name": "Name",
+    "name-example": "Your name",
+    "subject": "Subject",
+    "subject-example": "Subject of your message",
+    "message-example": "Your message",
+    "submit": "Send message"
+  }
+}

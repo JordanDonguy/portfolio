@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 
 type ContactFormProps = {
@@ -9,6 +10,8 @@ type ContactFormProps = {
 };
 
 export default function ContactForm({ showForm, handleFormButton }: ContactFormProps) {
+  const t = useTranslations("contact");
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -54,7 +57,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
   return (
     <form onSubmit={handleSubmit} className="w-full h-full">
       <fieldset className="h-full">
-        <legend className={`${showForm && "hidden"} w-full text-center text-2xl mb-8`}>Contact Form</legend>
+        <legend className={`${showForm && "hidden"} w-full text-center text-2xl mb-8`}>{t("form")}</legend>
         <div
           className={`${showForm ? "bg-glass2 backdrop-blur-md md:border rounded-asym2" : "bg-glass border rounded-asym pb-10 lg:pb-8"} grid grid-cols-1 lg:grid-cols-2 h-full gap-8 border-zinc-700 col-span-2 p-4 md:p-6 relative`}
         >
@@ -70,13 +73,13 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
 
           <div className={`${showForm && "mt-10"} mt-8 col-span-1 flex flex-col`}>
             <label htmlFor="name" className="text-start mb-2">
-              Name
+              {t("name")}
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Your name"
+              placeholder={t("name-example")}
               required
               className="bg-[rgba(60,60,82,0.4)] h-10 rounded-lg px-4 py-1"
               value={formData.name}
@@ -100,13 +103,13 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
           </div>
           <div className="lg:col-span-2 flex flex-col">
             <label htmlFor="subject" className="text-start mb-2">
-              Subject
+              {t("subject")}
             </label>
             <input
               type="text"
               id="subject"
               name="subject"
-              placeholder="Subject of your message"
+              placeholder={t("subject-example")}
               required
               className="bg-[rgba(60,60,82,0.4)] h-10 rounded-lg px-4 py-1"
               value={formData.subject}
@@ -120,7 +123,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
             <textarea
               id="message"
               name="message"
-              placeholder="Your message"
+              placeholder={t("message-example")}
               required
               className={`bg-[rgba(60,60,82,0.4)] min-h-32 2xl:min-h-40 rounded-lg px-4 py-2 ${showForm && "resize-none"
                 }`}
@@ -135,7 +138,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
             className="lg:col-span-2 mx-auto w-full md:w-1/3 my-2 flex justify-center items-center h-12 rounded-full border border-zinc-400 hover:cursor-pointer hover:bg-[rgba(60,60,82,0.2)] hover:md:scale-110 duration-150 active:scale-90 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Send size={20} />
-            <p className="px-2 text-lg">Send message</p>
+            <p className="px-2 text-lg">{t("submit")}</p>
           </button>
 
           {status === "success" && <p className="lg:col-span-2 text-center text-green-500">Message sent successfully!</p>}

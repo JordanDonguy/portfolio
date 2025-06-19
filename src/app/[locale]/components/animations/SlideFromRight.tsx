@@ -15,7 +15,7 @@ export const SlideFromRight = ({ children }: SlideFromRightProps) => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         // Mobile/tablet
-        setThreshold(0.2);
+        setThreshold(0.15);
       } else {
         // Desktop
         setThreshold(0.6);

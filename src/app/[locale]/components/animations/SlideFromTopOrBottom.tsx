@@ -41,7 +41,7 @@ export const SlideFromTopOrBottom = ({ children }: SlideFromTopOrBottom) => {
       ref={ref}
       initial={{ y: fromTop ? -200 : 200, opacity: 0, scale: 0 }}
       animate={isInView ? { y: 0, opacity: 1, scale: 1 } : {}}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       className="h-full"
     >
       {children}
