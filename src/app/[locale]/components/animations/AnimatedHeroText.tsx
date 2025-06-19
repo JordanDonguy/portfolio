@@ -1,7 +1,7 @@
 'use client';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Download } from "lucide-react";
 
 interface AnimatedHeroTextProps {
@@ -14,6 +14,7 @@ export default function AnimatedHeroText({ showForm, handleFormButton }: Animate
   const isInView = useInView(ref, { once: false, amount: 0.5, margin: '150px' });
 
   const t = useTranslations('home');
+  const locale = useLocale();
 
   return (
     <motion.div
@@ -39,9 +40,13 @@ export default function AnimatedHeroText({ showForm, handleFormButton }: Animate
         >
           {t("contact")}
         </button>
-        <button className="text-2xl w-9/10 min-w-48 h-16 md:h-20 box-border rounded-full border inline-flex items-center justify-center bg-[rgba(11,11,14,0.7)] md:bg-transparent hover:scale-110 hover:bg-[rgba(60,60,82,0.2)] hover:cursor-pointer active:scale-90 duration-150">
+        <a 
+        href={`/resume/${locale === "fr" ? "CV Jordan Donguy (fr).pdf" : "Resume Jordan Donguy (en).pdf"}`}
+        download
+        className="text-2xl w-9/10 min-w-48 h-16 md:h-20 box-border rounded-full border inline-flex items-center justify-center bg-[rgba(11,11,14,0.7)] md:bg-transparent hover:scale-110 hover:bg-[rgba(60,60,82,0.2)] hover:cursor-pointer active:scale-90 duration-150"
+        >
           {t("resume")}&nbsp;<Download />
-        </button>
+        </a>
       </div>
     </motion.div>
   )
