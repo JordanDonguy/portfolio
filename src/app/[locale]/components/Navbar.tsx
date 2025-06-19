@@ -73,7 +73,7 @@ export default function Navbar() {
         <div className="w-full h-full bg-glass flex justify-between items-center">
           <a href="#home" className="font-bold text-xl text-cyan-500 pl-2">Portfolio</a>
           <div className="flex gap-8">
-            <button onClick={handleToggleVisibility} className="pr-5 hover:cursor-pointer">
+            <button onClick={handleToggleVisibility} aria-label="Open menu" className="pr-5 hover:cursor-pointer">
               <Menu size={36} />
             </button>
           </div>

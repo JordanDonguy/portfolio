@@ -80,6 +80,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               id="name"
               name="name"
               placeholder={t("name-example")}
+              aria-label="Your name"
+              title="Enter your full name"
               required
               className="bg-[rgba(60,60,82,0.4)] h-10 rounded-lg px-4 py-1"
               value={formData.name}
@@ -95,6 +97,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               id="email"
               name="email"
               placeholder="example@email.com"
+              aria-label="Your email address"
+              title="Enter your email address"
               required
               className="bg-[rgba(60,60,82,0.4)] h-10 rounded-lg px-4 py-1"
               value={formData.email}
@@ -110,6 +114,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               id="subject"
               name="subject"
               placeholder={t("subject-example")}
+              aria-label="Message subject"
+              title="Enter the subject of your message"
               required
               className="bg-[rgba(60,60,82,0.4)] h-10 rounded-lg px-4 py-1"
               value={formData.subject}
@@ -124,6 +130,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               id="message"
               name="message"
               placeholder={t("message-example")}
+              aria-label="Send your message"
+              title="Send message"
               required
               className={`bg-[rgba(60,60,82,0.4)] min-h-32 2xl:min-h-40 rounded-lg px-4 py-2 ${showForm && "resize-none"
                 }`}
@@ -141,8 +149,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
             <p className="px-2 text-lg">{t("submit")}</p>
           </button>
 
-          {status === "success" && <p className="lg:col-span-2 text-center text-green-500">Message sent successfully!</p>}
-          {status === "error" && <p className="lg:col-span-2 text-center text-red-500">Failed to send message. Please try again.</p>}
+          {status === "success" && <p role="status" className="lg:col-span-2 text-center text-green-500">Message sent successfully!</p>}
+          {status === "error" && <p role="status" className="lg:col-span-2 text-center text-red-500">Failed to send message. Please try again.</p>}
         </div>
       </fieldset>
     </form>

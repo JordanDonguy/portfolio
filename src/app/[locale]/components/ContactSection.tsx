@@ -24,6 +24,8 @@ export default function ContactSection() {
               <div className="space-y-6 h-full border border-zinc-700 rounded-4xl py-6 px-2 md:p-6 bg-glass">
                 <a
                   href="mailto:jordan.donguy@gmail.com"
+                  aria-label="Send an email to jordan.donguy@gmail.com"
+                  title="Send an email"
                   className='flex items-center h-16 w-full gap-4 border border-zinc-700 px-4 rounded-2xl hover:bg-[rgba(60,60,82,0.2)] active:scale-90 duration-150'
                 >
                   <div className='w-12 h-12 bg-[rgba(60,60,82,0.4)] rounded-full flex justify-center items-center'>
@@ -33,6 +35,8 @@ export default function ContactSection() {
                 </a>
                 <a
                   href="tel:+33649265638"
+                  aria-label="Call Jordan Donguy at +33 6 49 26 56 38"
+                  title="Call Jordan Donguy"
                   className='flex items-center h-16 w-full gap-4 border border-zinc-700 px-4 rounded-2xl hover:bg-[rgba(60,60,82,0.2)] active:scale-90 duration-150'
                 >
                   <div className='w-12 h-12 bg-[rgba(60,60,82,0.4)] rounded-full flex justify-center items-center'>
@@ -43,6 +47,9 @@ export default function ContactSection() {
                 <a
                   href="https://www.google.com/search?q=lyon"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Lyon, France on Google"
+                  title="View location on Google"
                   className='flex items-center h-16 w-full gap-4 border border-zinc-700 px-4 rounded-2xl hover:bg-[rgba(60,60,82,0.2)] active:scale-90 duration-150'
                 >
                   <div className='w-12 h-12 bg-[rgba(60,60,82,0.4)] rounded-full flex justify-center items-center'>

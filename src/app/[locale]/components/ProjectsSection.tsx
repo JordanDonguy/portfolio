@@ -12,19 +12,19 @@ import ProjectCard from './ProjectCard';
 export default function ProjectsSection() {
   const t = useTranslations("projects")
 
-  const htmlBadge = "https://img.shields.io/badge/Html-E34F26?logo=Html5&logoColor=white&style=flat"
-  const cssBadge = "https://img.shields.io/badge/CSS-663399?logo=CSS&logoColor=white&style=flat"
-  const jsBadge = "https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white&style=flat"
-  const reactBadge = "https://img.shields.io/badge/React-61DAFB?logo=React&logoColor=white&style=flat";
-  const reactRouterBadge = "https://img.shields.io/badge/React Router-CA4245?logo=reactrouter&logoColor=white&style=flat";
-  const reduxBadge = "https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white&style=flat";
-  const tailwindBadge = "https://img.shields.io/badge/Tailwind CSS-06B6D4?logo=tailwindcss&logoColor=white&style=flat";
-  const nodeBadge = "https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=white&style=flat";
-  const expressBadge = "https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white&style=flat";
-  const postgresqlBadge = "https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=flat";
-  const netlifyBadge = "https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white&style=flat";
-  const supabaseBadge = "https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white&style=flat";
-  const northflankBadge = "/img/badge/Northflank.webp";
+  const htmlBadge = {name: "Html", url: "https://img.shields.io/badge/Html-E34F26?logo=Html5&logoColor=white&style=flat"};
+  const cssBadge = {name: "CSS", url: "https://img.shields.io/badge/CSS-663399?logo=CSS&logoColor=white&style=flat"};
+  const jsBadge = {name: "JavaScript", url: "https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white&style=flat"};
+  const reactBadge = {name: "React.js", url: "https://img.shields.io/badge/React-61DAFB?logo=React&logoColor=white&style=flat"};
+  const reactRouterBadge = {name: "React Router", url: "https://img.shields.io/badge/React Router-CA4245?logo=reactrouter&logoColor=white&style=flat"};
+  const reduxBadge = {name: "Redux", url: "https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white&style=flat"};
+  const tailwindBadge = {name: "Tailwind", url: "https://img.shields.io/badge/Tailwind CSS-06B6D4?logo=tailwindcss&logoColor=white&style=flat"};
+  const nodeBadge = {name: "Node.js", url: "https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=white&style=flat"};
+  const expressBadge = {name: "Express.js", url: "https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white&style=flat"};
+  const postgresqlBadge = {name: "PostgreSQL", url: "https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=flat"};
+  const netlifyBadge = {name: "Netlify", url: "https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white&style=flat"};
+  const supabaseBadge = {name: "Supabase", url: "https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white&style=flat"};
+  const northflankBadge = {name: "Northflank", url: "/img/badge/Northflank.webp"};
 
   const projectList = [
     {
