@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Jordan Donguy • Portfolio
 
-## Getting Started
+Welcome to my personal portfolio built with Next.js!  
 
-First, run the development server:
+## 🚀 About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This portfolio showcases my web development work, projects, and contact details. It is built with:
+- ```TypeScript``` for static typing and developer tooling
+- ```Next.js``` for fast performance and server-side rendering
+- ```Tailwind CSS``` for utility-first styling
+- ```Framer Motion``` for animations
+- ```Resend``` for contact form handling
+- ```next-intl``` for multi-language support
+
+## 📸 Live Demo
+
+👉 [https://jordandonguy.com](https://jordandonguy.com)
+
+## ⚙️ Features
+
+- Fully responsive design
+- Smooth component animations
+- Multi-language support (`en`, `fr`, etc.) using `next-intl`
+- Contact form powered by [Resend](https://resend.com/)
+- Deployed on Vercel for fast global performance
+
+## 🛠 Tech Stack
+
+- **Language**: [TypeScript](https://www.typescriptlang.org)
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **i18n**: [next-intl](https://next-intl-docs.vercel.app/)
+- **Email API**: [Resend](https://resend.com/)
+- **Hosting**: [Vercel](https://vercel.com/)
+
+## 🌍 Internationalization
+
+This project uses [`next-intl`](https://next-intl-docs.vercel.app/) for internationalization.  
+Languages supported:
+- English (`en`)
+- French (`fr`)
+
+To add new languages:
+1. Create a new JSON translation file in `messages/`
+2. Update the `i18n.ts` config
+3. Add a route namespace or dynamic locale switcher (optional)
+
+## ✉️ Contact Form
+
+The contact form is fully functional and sends messages via the [Resend](https://resend.com/) email API.
+
+You can find the setup in:  
+- **API**: ```/src/app/api/send-email/route.tx```  
+- **Contact form**: ```/src/app/[locale]/components/ContactForm.tsx```  
+
+Messages are sent securely using environment variables for your API key.
+
+## 🧑‍💻 Getting Started
+
 ```
+git clone https://github.com/JordanDonguy/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
+Visit http://localhost:3000 to start the local server.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🙏 Contributing
+Suggestions and improvements are welcome!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Open an issue
+- Fork the repo and submit a pull request
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📄 License
+This project is licensed under the MIT License.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_- Built with passion by **Jordan Donguy**_
