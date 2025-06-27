@@ -22,7 +22,7 @@ export default function SkillsSection() {
               <h3 className="text-center text-cyan-500 font-bold h-12 text-xl min-w-36">Languages</h3>
               <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap mb-2 md:mb-0">
                 {languagesList.map(item =>
-                  <article key={item} className="flex flex-col items-center justify-evenly w-28 h-28 bg-[rgba(39,39,42,0.7)] rounded-xl">
+                  <article key={item} className="flex flex-col items-center justify-evenly w-28 h-28 bg-zinc-900 rounded-xl">
                     <Image src={`/img/logo/${item}.svg`} alt={item} width={72} height={72} />
                     <p>{item.replace(/dot/g, ".")}</p>
                   </article>
@@ -33,7 +33,7 @@ export default function SkillsSection() {
               <h3 className="text-center text-cyan-500 font-bold h-12 text-xl min-w-36">Front-end</h3>
               <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap mb-2 md:mb-0">
                 {frontEndList.map(item =>
-                  <article key={item} className="flex flex-col items-center justify-evenly w-28 h-28 bg-[rgba(39,39,42,0.7)] rounded-xl">
+                  <article key={item} className="flex flex-col items-center justify-evenly w-28 h-28 bg-zinc-900 rounded-xl">
                     <Image src={`/img/logo/${item}.svg`} alt={item} width={72} height={72} />
                     <p>{item.replace(/dot/g, ".")}</p>
                   </article>
@@ -44,7 +44,7 @@ export default function SkillsSection() {
               <h3 className="text-center text-cyan-500 font-bold h-12 text-xl min-w-36">Back-end</h3>
               <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap mb-2 md:mb-0">
                 {backEndList.map(item =>
-                  <article key={item} className="flex flex-col items-center justify-evenly w-28 h-28 bg-[rgba(39,39,42,0.7)] rounded-xl">
+                  <article key={item} className="flex flex-col items-center justify-evenly w-28 h-28 bg-zinc-900 rounded-xl">
                     <Image src={`/img/logo/${item}.svg`} alt={item} width={72} height={72} />
                     <p>{item.replace(/dot/g, ".")}</p>
                   </article>
@@ -55,7 +55,7 @@ export default function SkillsSection() {
               <h3 className="text-center text-cyan-500 font-bold h-12 text-xl min-w-36">{t("tools")}</h3>
               <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap">
                 {toolsList.map(item =>
-                  <article key={item} className="flex flex-col items-center justify-evenly w-28 h-28 bg-[rgba(39,39,42,0.7)] rounded-xl">
+                  <article key={item} className="flex flex-col items-center justify-evenly w-28 h-28 bg-zinc-900 rounded-xl">
                     <Image src={`/img/logo/${item}.svg`} alt={item} width={72} height={72} />
                     <p>{item.replace(/dot/g, ".")}</p>
                   </article>

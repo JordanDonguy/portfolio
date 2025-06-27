@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -17,6 +12,11 @@
   --foreground: #ededed;
 }
 
+@media screen and (max-width: 639px) and (hover: none) and (pointer: coarse) {
+  :root {
+    --background: rgb(14, 14, 14);  /* very dark gray instead of pure black to prevent OLED screen flickering */
+  }
+}
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px rgba(50, 50, 62, 0.3) inset !important;
