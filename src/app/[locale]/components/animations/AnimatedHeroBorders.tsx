@@ -20,7 +20,7 @@ export default function AnimatedHeroBorder({ showForm }: AnimatedHeroBordersProp
           borderTopLeftRadius: { duration: 0.4, delay: 0.2 }
         }}
         style={{ originX: 1 }}
-        className={`${!showForm ? "border-t" : ""} z-20 pointer-events-none duration-100 ease-linear absolute top-0 right-0 mt-[-1px] h-full w-full border-zinc-700 rounded-asym`}
+        className={`${!showForm ? "md:border-t" : ""} z-20 pointer-events-none duration-100 ease-linear absolute top-0 right-0 mt-[-1px] h-full w-full border-zinc-700 rounded-asym`}
       />
       <motion.div
         ref={ref}
@@ -31,7 +31,7 @@ export default function AnimatedHeroBorder({ showForm }: AnimatedHeroBordersProp
           borderTopRightRadius: { duration: 0.4, delay: 0.2 }
         }}
         style={{ originX: 0 }}
-        className={`${!showForm ? "border-b" : ""} z-20 pointer-events-none duration-100 ease-linear absolute bottom-0 left-0 mb-[-1px] h-full w-full border-zinc-700 rounded-asym`}
+        className={`${!showForm ? "md:border-b" : ""} z-20 pointer-events-none duration-100 ease-linear absolute bottom-0 left-0 mb-[-1px] h-full w-full border-zinc-700 rounded-asym`}
       />
     </div>
   )

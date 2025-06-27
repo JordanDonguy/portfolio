@@ -11,13 +11,13 @@ export default function SkillsSection() {
   const toolsList = ["Git", "GitHub", "Netlify", "Vercel", "Railway", "Render", "Northflank", "Supabase"]
 
   return (
-    <section id="skills" className="relative w-full min-h-screen overflow-hidden">
+    <section id="skills" className="relative w-full min-h-screen overflow-hidden pb-10 border-b-2 md:border-0 border-zinc-700">
       <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <SlideFromRight>
-        <div className="max-w-6xl mx-2 lg:mx-auto text-center pt-24 xl:max-w-7xl">
+        <div className="max-w-6xl mx-2 lg:mx-auto text-center pt-16 xl:max-w-7xl">
           <h2 className="text-4xl font-bold 2xl mb-8">{t("title")}</h2>
-          <div className="bg-glass pt-6 pb-4 border-y border-zinc-700 rounded-asym backdrop-blur-sm">
+          <div className="bg-glass pt-6 pb-4 md:border-y border-zinc-700 rounded-asym backdrop-blur-sm">
             <section className="max-w-6xl mx-auto mb-4 flex flex-col items-center pb-4">
               <h3 className="text-center text-cyan-500 font-bold h-12 text-xl min-w-36">Languages</h3>
               <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap mb-2 md:mb-0">

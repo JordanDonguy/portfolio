@@ -57,9 +57,9 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
   return (
     <form onSubmit={handleSubmit} className="w-full h-full">
       <fieldset className="h-full">
-        <legend className={`${showForm && "hidden"} w-full text-center text-2xl mb-8`}>{t("form")}</legend>
+        <legend className={`${showForm && "hidden"} w-full text-center text-2xl md:mb-8`}>{t("form")}</legend>
         <div
-          className={`${showForm ? "bg-glass2 backdrop-blur-md md:border rounded-asym2" : "bg-glass border rounded-asym pb-10 lg:pb-8"} grid grid-cols-1 lg:grid-cols-2 h-full gap-8 border-zinc-700 col-span-2 p-4 md:p-6 relative`}
+          className={`${showForm ? "bg-glass2 backdrop-blur-md md:border rounded-asym2" : "bg-glass md:border rounded-asym pb-10 lg:pb-8"} grid grid-cols-1 lg:grid-cols-2 h-full gap-8 border-zinc-700 col-span-2 p-4 md:p-6 relative`}
         >
           {showForm && (
             <button

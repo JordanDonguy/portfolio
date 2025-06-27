@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -21,12 +21,19 @@ export default function Navbar() {
     router.push(newPath);
   };
 
-
   const sectionIds = ["home", "about", "skills", "projects", "contact"];
   const { activeSection } = useActiveSection(sectionIds, 0.6);
   const { activeSection: activeSectionMobile } = useActiveSection(sectionIds, 0.2);
 
   const [menuVisibility, setMenuVisibility] = useState(false);
+
+  // Define delay with a useMemo to make sure window's available when running the function
+  const delay = useMemo(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 640 ? 0 : 0.5;
+    }
+    return 0.5;
+  }, []);
 
   const handleToggleVisibility = () => {
     return setMenuVisibility(prev => !prev);
@@ -36,10 +43,10 @@ export default function Navbar() {
     <motion.div
       initial={{ y: "-100%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}>
+      transition={{ duration: 0.5, delay: delay, ease: "easeOut" }}>
 
       {/* Navbar Desktop */}
-      <nav className="w-full h-16 hidden md:block bg-glass border-b border-zinc-700 shadow-md backdrop-blur-md">
+      <nav className="w-full h-16 hidden md:block bg-glass border-b border-zinc-700 shadow-md">
         <div className="max-w-7xl h-full mx-auto flex justify-between items-center lg:pr-6 xl:px-0">
           <a href="#home" className="font-bold text-xl text-cyan-500 pl-5 xl:pl-0 hover:scale-110 active:scale-90 duration-100">Portfolio</a>
           <ul className="hidden md:flex space-x-3 lg:space-x-6 pr-5 lg:pr-0 items-center">
@@ -70,7 +77,7 @@ export default function Navbar() {
 
       {/* Navbar Mobile */}
       <nav className="md:hidden w-full h-16 border-b border-zinc-700 shadow-md">
-        <div className="w-full h-full bg-glass flex justify-between items-center">
+        <div className="w-full h-full bg-[rgba(11,11,14,0.5)] backdrop-blur-md flex justify-between items-center">
           <a href="#home" className="font-bold text-xl text-cyan-500 pl-2">Portfolio</a>
           <div className="flex gap-8">
             <button onClick={handleToggleVisibility} aria-label="Open menu" className="pr-5 hover:cursor-pointer">

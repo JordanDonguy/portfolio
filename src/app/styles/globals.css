@@ -82,6 +82,13 @@ body {
   backdrop-filter: blur(8px);
 }
 
+@media screen and (max-width: 640px) {
+  .bg-glass {
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+}
+
 .bg-glass2 {
   background-color: rgba(11, 11, 14, 0.85);
   backdrop-filter: blur(12px);

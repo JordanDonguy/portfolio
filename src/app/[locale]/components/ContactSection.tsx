@@ -17,11 +17,11 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto text-center pt-24">
         <h2 className="text-4xl font-bold mb-12 xl:mb-16">Contact</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 px-2 md:px-5 lg:px-0 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:px-5 lg:px-0 lg:gap-12">
           <SlideFromLeft>
             <div className='col-span-1 h-full flex flex-col'>
-              <h3 className='text-2xl mb-8'>{t("informations")}</h3>
-              <div className="space-y-6 h-full border border-zinc-700 rounded-4xl py-6 px-2 md:p-6 bg-glass">
+              <h3 className='text-2xl mb-4 md:mb-8'>{t("informations")}</h3>
+              <div className="space-y-6 h-full md:border border-zinc-700 rounded-4xl py-6 px-2 md:p-6 bg-glass">
                 <a
                   href="mailto:jordan.donguy@gmail.com"
                   aria-label="Send an email to jordan.donguy@gmail.com"
