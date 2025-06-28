@@ -22,7 +22,8 @@ This portfolio showcases my web development work, projects, and contact details.
 - Smooth component animations
 - Multi-language support (`en`, `fr`, etc.) using `next-intl`
 - Contact form powered by [Resend](https://resend.com/)
-- Deployed on Vercel for fast global performance
+- Deployed on [Vercel](https://vercel.com/) for fast global performance
+- Protected with [Cloudflare](https://www.cloudflare.com/) for enhanced security
 
 ## 🛠 Tech Stack
 
@@ -33,6 +34,7 @@ This portfolio showcases my web development work, projects, and contact details.
 - **i18n**: [next-intl](https://next-intl-docs.vercel.app/)
 - **Email API**: [Resend](https://resend.com/)
 - **Hosting**: [Vercel](https://vercel.com/)
+- **Security/Protection**: [Cloudflare](https://www.cloudflare.com/)
 
 ## 🌍 Internationalization
 

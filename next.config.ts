@@ -1,6 +1,7 @@
 import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
+
 const withNextIntl = createNextIntlPlugin();
 
 // Extend the base config with headers
