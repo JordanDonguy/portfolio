@@ -22,9 +22,10 @@ export default function ProjectsSection() {
   const nodeBadge = {name: "Node.js", url: "https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=white&style=flat"};
   const expressBadge = {name: "Express.js", url: "https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white&style=flat"};
   const postgresqlBadge = {name: "PostgreSQL", url: "https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=flat"};
-  const netlifyBadge = {name: "Netlify", url: "https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white&style=flat"};
+  // const netlifyBadge = {name: "Netlify", url: "https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white&style=flat"};
   const supabaseBadge = {name: "Supabase", url: "https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white&style=flat"};
   const northflankBadge = {name: "Northflank", url: "/img/badge/Northflank.webp"};
+  const cloudflareBadge = {name: "Cloudflare", url: "https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white&style=flat"};
 
   const projectList = [
     {
@@ -32,8 +33,8 @@ export default function ProjectsSection() {
       img: "/img/projects/guitar-shop.webp",
       img_mobile: "/img/projects/guitar-shop-mobile.webp",
       description: t("guitar-shop"),
-      tech_stack: [reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, netlifyBadge, northflankBadge, supabaseBadge],
-      live_url: "https://guitar-shop-frontend.netlify.app/",
+      tech_stack: [reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, cloudflareBadge, northflankBadge, supabaseBadge],
+      live_url: "https://app.guitar-shop.store",
       github_url: "https://github.com/JordanDonguy/guitar-shop-frontend",
     },
     {
@@ -41,8 +42,8 @@ export default function ProjectsSection() {
       img: "/img/projects/mini-reddit.webp",
       img_mobile: "/img/projects/mini-reddit-mobile.webp",
       description: t("mini-reddit"),
-      tech_stack: [reactBadge, reduxBadge, netlifyBadge],
-      live_url: "https://jordandonguy-minireddit.netlify.app/",
+      tech_stack: [reactBadge, reduxBadge, cloudflareBadge],
+      live_url: "https://mini-reddit.pages.dev",
       github_url: "https://github.com/JordanDonguy/mini-reddit",
     },
     {

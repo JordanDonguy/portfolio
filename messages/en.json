@@ -29,7 +29,7 @@
     "live-app": "Live app",
     "tech-stack": "Tech stack",
     "guitar-shop": "A responsive e-commerce web app for browsing and purchasing guitars. Users can view product details, manage a cart, and check out. The app also features Google OAuth login, newsletter subscription and dynamic product filtering.",
-    "mini-reddit": "A front-end web application built with React and Redux that mimics core features of Reddit. It fetches real-time content using the Reddit API, allowing users to browse subreddits, view posts, and explore comment threads. Designed to showcase API integration, state management, and responsive UI development. Deployed on Netlify.",
+    "mini-reddit": "A front-end web application built with React and Redux that mimics core features of Reddit. It fetches real-time content using the Reddit API, allowing users to browse subreddits, view posts, and explore comment threads. Designed to showcase API integration, state management, and responsive UI development. Deployed on Cloudflare Pages.",
     "jamming": "A React application that lets users search for songs and create custom playlists using the Spotify Web API. Features include live track search, playlist editing, and direct playlist saving to the user's Spotify account (with OAuth). Built to demonstrate API integration, component-based architecture, and user authentication. Deployed on GitHub Pages.",
     "film-finder": "A movie search app that uses the OMDb API to fetch data based on user input. The app displays movies randomly based on the selected genre. Designed to showcase API integration, dynamic rendering, and a clean UI design. Deployed on GitHub Pages."
   },

@@ -1,8 +1,8 @@
 import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
-
 const withNextIntl = createNextIntlPlugin();
+const isDev = process.env.NODE_ENV === 'development';
 
 // Extend the base config with headers
 const nextConfig: NextConfig = {
@@ -14,7 +14,9 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src * data:; script-src 'self' 'unsafe-inline'",
+              isDev
+              ? "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src * data:; script-src 'self' 'unsafe-inline' 'unsafe-eval';"
+              : "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src * data:; script-src 'self' 'unsafe-inline';",
           },
           { key: "X-Frame-Options", value: "DENY" },
           { key: "X-Content-Type-Options", value: "nosniff" },
