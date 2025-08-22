@@ -12,22 +12,44 @@ import ProjectCard from './ProjectCard';
 export default function ProjectsSection() {
   const t = useTranslations("projects")
 
-  const htmlBadge = {name: "Html", url: "https://img.shields.io/badge/Html-E34F26?logo=Html5&logoColor=white&style=flat"};
-  const cssBadge = {name: "CSS", url: "https://img.shields.io/badge/CSS-663399?logo=CSS&logoColor=white&style=flat"};
-  const jsBadge = {name: "JavaScript", url: "https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white&style=flat"};
+  const tsBadge = {name: "TypeScript", url: "https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white&style=flat"};
   const reactBadge = {name: "React.js", url: "https://img.shields.io/badge/React-61DAFB?logo=React&logoColor=white&style=flat"};
   const reactRouterBadge = {name: "React Router", url: "https://img.shields.io/badge/React Router-CA4245?logo=reactrouter&logoColor=white&style=flat"};
+  const nextJsBadge = {name: "Next.js", url: "https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white&style=flat"};
   const reduxBadge = {name: "Redux", url: "https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white&style=flat"};
   const tailwindBadge = {name: "Tailwind", url: "https://img.shields.io/badge/Tailwind CSS-06B6D4?logo=tailwindcss&logoColor=white&style=flat"};
   const nodeBadge = {name: "Node.js", url: "https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=white&style=flat"};
   const expressBadge = {name: "Express.js", url: "https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white&style=flat"};
   const postgresqlBadge = {name: "PostgreSQL", url: "https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=flat"};
-  // const netlifyBadge = {name: "Netlify", url: "https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white&style=flat"};
+  const vercelBadge = {name: "Vercel", url: "https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white&style=flat"};
+  const prismaBadge = {name: "Prisma", url: "https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white&style=flat"};
   const supabaseBadge = {name: "Supabase", url: "https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white&style=flat"};
+  const neonBadge = {name: "Neon", url: "/img/badge/neon.webp"};
   const northflankBadge = {name: "Northflank", url: "/img/badge/Northflank.webp"};
   const cloudflareBadge = {name: "Cloudflare", url: "https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white&style=flat"};
+  const geminiBadge = {name: "Gemini", url: "https://img.shields.io/badge/Google Gemini-8E75B2?logo=google gemini&logoColor=white&style=flat"};
+  const mistralBadge = {name: "Mistral", url: "https://img.shields.io/badge/Mistral AI-FA520F?logo=Mistral AI&logoColor=white&style=flat"};
+  const jestBadge = {name: "Jest", url: "https://img.shields.io/badge/Jest-C21325?logo=Jest&logoColor=white&style=flat"};
 
   const projectList = [
+    {
+      title: "Traduxo",
+      img: "/img/projects/traduxo.webp",
+      img_mobile: "/img/projects/traduxo-mobile.webp",
+      description: t("traduxo"),
+      tech_stack: [tsBadge, nextJsBadge, geminiBadge, tailwindBadge, prismaBadge, jestBadge, vercelBadge, neonBadge, cloudflareBadge],
+      live_url: "https://traduxo.app",
+      github_url: "https://github.com/JordanDonguy/traduxo",
+    },
+    {
+      title: "Aria",
+      img: "/img/projects/aria.webp",
+      img_mobile: "/img/projects/aria-mobile.webp",
+      description: t("aria"),
+      tech_stack: [tsBadge, nextJsBadge, mistralBadge, tailwindBadge, vercelBadge, supabaseBadge],
+      live_url: "https://chat-with-aria.vercel.app",
+      github_url: "https://github.com/JordanDonguy/aria",
+    },
     {
       title: "Guitar Shop",
       img: "/img/projects/guitar-shop.webp",
@@ -45,24 +67,6 @@ export default function ProjectsSection() {
       tech_stack: [reactBadge, reduxBadge, cloudflareBadge],
       live_url: "https://mini-reddit.pages.dev",
       github_url: "https://github.com/JordanDonguy/mini-reddit",
-    },
-    {
-      title: "Jamming",
-      img: "/img/projects/jamming.webp",
-      img_mobile: "/img/projects/jamming-mobile.webp",
-      description: t("jamming"),
-      tech_stack: [reactBadge],
-      live_url: "https://jordandonguy.github.io/jamming/",
-      github_url: "https://github.com/JordanDonguy/jamming",
-    },
-    {
-      title: "Film Finder",
-      img: "/img/projects/film-finder.webp",
-      img_mobile: "/img/projects/film-finder-mobile.webp",
-      description: t("film-finder"),
-      tech_stack: [htmlBadge, cssBadge, jsBadge],
-      live_url: "https://jordandonguy.github.io/film-finder/",
-      github_url: "https://github.com/JordanDonguy/film-finder",
     },
   ]
 

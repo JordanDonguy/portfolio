@@ -35,7 +35,7 @@ export const SlideFromTopOrBottom = ({ children }: SlideFromTopOrBottom) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const isInView = useInView(ref, { once: false, amount: threshold, margin: `${margin}px` });
+  const isInView = useInView(ref, { once: true, amount: threshold, margin: `${margin}px` });
   return (
     <motion.div
       ref={ref}

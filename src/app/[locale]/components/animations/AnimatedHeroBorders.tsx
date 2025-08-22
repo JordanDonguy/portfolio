@@ -8,7 +8,7 @@ interface AnimatedHeroBordersProps {
 
 export default function AnimatedHeroBorder({ showForm }: AnimatedHeroBordersProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: false, amount: 0.5, margin: '200px' });
+  const isInView = useInView(ref, { once: true, amount: 0.5, margin: '200px' });
   return (
     <div>
       <motion.div

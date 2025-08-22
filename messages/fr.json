@@ -8,7 +8,7 @@
   },
   "home": {
     "greeting": "Salut, moi c'est <br></br> Jordan 👋,",
-    "intro": "Je développe des applis web",
+    "intro": "développeur web & mobile",
     "presentation": "Je suis un développeur full-stack passioné par le développement d'applications modernes et intuitives !",
     "contact": "Me contacter 👋",
     "resume": "CV"
@@ -17,7 +17,7 @@
     "title": "À propos",
     "presentation-title": "📝 Présentation",
     "background-title": "📚 Mon parcours",
-    "presentation": "Je suis Jordan, un <b>développeur full-stack</b> suivant actuellement un <b>Bachelor CDA</b> (<b>C</b>oncepteur <b>D</b>éveloppeur d'\u200B<b>A</b>pplication) à distance dispensé par l'école O'Clock située à Paris. J’ai récemment terminé le parcours <b>Full-Stack Engineer de Codecademy</b> et j'utilise principalement <b>React, Node.js et PostgreSQL</b>. Dernièrement, je me suis plongé dans <b>Next.js</b> et je prévois d’intégrer des <b>outils d’IA</b> dans mes prochains projets. Je vise à de travailler avec des <b>stacks modernes</b>, en combinant <b>expertise technique</b> et attention portée à <b>l’expérience utilisateur</b>.",
+    "presentation": "Je suis Jordan, un <b>développeur full-stack</b> suivant actuellement un <b>Bachelor CDA</b> (<b>C</b>oncepteur <b>D</b>éveloppeur d'\u200B<b>A</b>pplication) à distance dispensé par l'école O'Clock située à Paris. J’ai récemment terminé le parcours <b>Full-Stack Engineer de Codecademy</b> et j'utilise principalement <b>Next.js, React, Node.js et PostgreSQL</b>. Je travaille aussi sur l’intégration <b>d’outils d’IA</b> directement dans mes applications web, avec pour objectif de concevoir des <b>applications modernes</b>, alliant expertise technique et attention portée à l’expérience utilisateur.",
     "background": "Avant de me lancer dans le développement, j’ai travaillé pendant <b>plusieurs années</b> comme <b>électricien automobile</b> — installation de nouveaux équipements, programmation de véhicules, et diagnostic de systèmes électriques. C’est là que j’ai développé de solides compétences en <b>raisonnement logique, résolution de problèmes et travail en équipe</b>. Depuis, je me suis tourné vers le développement web full-stack, en combinant mon <b>background technique</b> avec une passion pour la <b>création d’outils et d’applications numériques</b>. Je suis toujours ouvert à de nouvelles opportunités, collaborations ou idées — n’hésitez pas à me contacter !"
   },
   "skills": {
@@ -28,10 +28,10 @@
     "title": "Projets",
     "live-app": "Voir l’application",
     "tech-stack": "Stack technique",
+    "traduxo": "Une application Next.js de traductions alimentées par l’IA, avec des suggestions d’expressions et des explications concrètes basées sur des exemples réels via l’API Gemini. Les utilisateurs peuvent taper ou dicter du texte, obtenir des traductions, des suggestions d’expressions, des explications détaillées, consulter leur historique et enregistrer leurs favoris. Met en avant l’intégration de l’IA, déployée sur Vercel.",
+    "aria": "Une application web Next.js proposant un chatbot IA moderne et minimaliste, alimenté par l’API Mistral et soutenu par Supabase. Les utilisateurs peuvent converser naturellement, avec authentification, validation sécurisée des saisies, historique des conversations et interface réactive. Met en avant l’intégration de l’IA et la gestion en temps réel de la base de données, déployée sur Vercel.",
     "guitar-shop": "Une application web e-commerce responsive pour parcourir et acheter des guitares. Les utilisateurs peuvent consulter les détails des produits, gérer leur panier et finaliser leurs achats. L’application inclut également une connexion via Google OAuth, l’abonnement à une newsletter, et un filtrage dynamique des produits.",
-    "mini-reddit": "Une application web front-end développée avec React et Redux qui reproduit les fonctionnalités principales de Reddit. Elle récupère du contenu en temps réel via l’API Reddit, permettant aux utilisateurs de parcourir des subreddits, consulter des posts et explorer les fils de commentaires. Conçue pour démontrer l’intégration d’API, la gestion d’état et le développement d’une interface responsive. Déployée sur Cloudflare Pages.",
-    "jamming": "Une application React qui permet aux utilisateurs de rechercher des chansons et de créer des playlists personnalisées via l’API Web de Spotify. Les fonctionnalités incluent la recherche en temps réel, l’édition des playlists et l’enregistrement direct des playlists sur le compte Spotify de l’utilisateur (avec OAuth). Conçue pour démontrer l’intégration d’API, une architecture basée sur les composants, et l’authentification utilisateur. Déployée sur GitHub Pages.",
-    "film-finder": "Une application de recherche de films qui utilise l’API OMDb pour récupérer des données selon les requêtes des utilisateurs. L'application affiche des films aléatoirement selon le genre choisi. Conçue pour mettre en avant l’intégration d’API, le rendu dynamique, et un design d’interface épuré. Déployée sur GitHub Pages."
+    "mini-reddit": "Une application web front-end développée avec React et Redux qui reproduit les fonctionnalités principales de Reddit. Elle récupère du contenu en temps réel via l’API Reddit, permettant aux utilisateurs de parcourir des subreddits, consulter des posts et explorer les fils de commentaires. Conçue pour démontrer l’intégration d’API, la gestion d’état et le développement d’une interface responsive. Déployée sur Cloudflare Pages."
   },
   "contact": {
     "informations": "Coordonnées",

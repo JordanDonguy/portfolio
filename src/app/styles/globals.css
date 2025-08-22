@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-comfortaa);
-  --font-mono: var(--font-comfortaa);
-}
-
 :root {
   --background: #000000;
   --foreground: #ededed;
@@ -103,6 +96,13 @@ body {
 
 .rounded-asym2 {
   border-radius: 0;
+}
+
+.rounded-asym-project {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 3.5rem;
+  border-bottom-left-radius: 3.5rem;
+  border-bottom-right-radius: 2rem;
 }
 
 @media screen and (min-width: 768px) {

@@ -11,7 +11,7 @@ interface AnimatedHeroTextProps {
 
 export default function AnimatedHeroText({ showForm, handleFormButton }: AnimatedHeroTextProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: false, amount: 0.5, margin: '150px' });
+  const isInView = useInView(ref, { once: true, amount: 0.5, margin: '150px' });
 
   const t = useTranslations('home');
   const locale = useLocale();

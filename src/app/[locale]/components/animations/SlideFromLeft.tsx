@@ -28,7 +28,7 @@ export const SlideFromLeft = ({ children }: SlideFromLeftProps) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-    const isInView = useInView(ref, { once: false, amount: threshold, margin: '200px' });
+    const isInView = useInView(ref, { once: true, amount: threshold, margin: '200px' });
   return (
     <motion.div
       ref={ref}
