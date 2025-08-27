@@ -7,7 +7,8 @@
 
 @media screen and (max-width: 639px) and (hover: none) and (pointer: coarse) {
   :root {
-    --background: rgb(14, 14, 14);  /* very dark gray instead of pure black to prevent OLED screen flickering */
+    --background: rgb(14, 14, 14);
+    /* very dark gray instead of pure black to prevent OLED screen flickering */
   }
 }
 
@@ -107,6 +108,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .rounded-asym2 {
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 5rem;
+  }
+
+  .rounded-asym-project {
     border-top-left-radius: 5rem;
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
