@@ -30,8 +30,7 @@
     "tech-stack": "Tech stack",
     "traduxo": "A Next.js web app offering AI-powered, native-like translations with idiomatic expression suggestions and real-world explanations via the Gemini API. Users can type or speak text, get translations, expression suggestions, detailed explanations, access history, and save favorites. Showcases AI integration, advanced translation features, and responsive UI, deployed on Vercel.",
     "aria": "A Next.js web app offering a modern, minimalistic AI chatbot powered by the Mistral API and backed by Supabase. Users can chat naturally, with authentication, secure input validation, conversation history, and responsive UI. Showcases AI integration, real-time database handling, and seamless frontend-backend interaction, deployed on Vercel.",
-    "guitar-shop": "A responsive e-commerce web app for browsing and purchasing guitars. Users can view product details, manage a cart, and check out. The app also features Google OAuth login, newsletter subscription and dynamic product filtering.",
-    "mini-reddit": "A front-end web application built with React and Redux that mimics core features of Reddit. It fetches real-time content using the Reddit API, allowing users to browse subreddits, view posts, and explore comment threads. Designed to showcase API integration, state management, and responsive UI development. Deployed on Cloudflare Pages."
+    "guitar-shop": "A responsive e-commerce web app for browsing and purchasing guitars. Users can view product details, manage a cart, and check out. The app also features Google OAuth login, newsletter subscription and dynamic product filtering."
   },
   "contact": {
     "informations": "Contact Informations",
