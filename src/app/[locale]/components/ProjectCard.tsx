@@ -19,7 +19,7 @@ export default function ProjectCard({ title, img, img_mobile, description, tech_
       <h3 className='absolute hidden xl:block top-8 text-2xl lg:text-3xl 2xl:text-4xl text-center'>{title}</h3>
       <img src={img} alt={`${title} desktop screenshot`} className='hidden lg:block object-contain h-2/3 my-auto' />
       <img src={img_mobile} alt={`${title} mobile screenshot`} className='lg:hidden w-full h-full object-contain rounded-asym-project border border-zinc-700 md:border-0 md:outline outline-zinc-700' />
-      <div className='lg:max-h-3/5 min-h-2/3 xl:w-1/3 my-auto text-white text-start mx-4 xl:mx-0'>
+      <div className='lg:max-h-3/5 min-h-2/3 xl:w-1/3 my-auto text-white text-start mx-2 md:mx-4 xl:mx-0'>
         <h3 className='xl:hidden text-2xl lg:text-3xl mb-4 lg:mb-6 text-center'>{title}</h3>
         <div className="grid grid-cols-2 w-full gap-3 md:gap-6 mb-6">
           <a

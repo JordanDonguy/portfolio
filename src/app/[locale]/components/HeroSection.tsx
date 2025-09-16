@@ -34,7 +34,7 @@ export default function HeroSection() {
               scale: { type: "tween", duration: 0.3, ease: "easeInOut" },
               opacity: { type: "tween", duration: 0.2, ease: "easeInOut" },
             }}
-            className="will-change-transform will-change-opacity absolute z-10 max-w-5xl w-full h-full pt-16 md:pt-0 md:h-3/4">
+            className="will-change-transform will-change-opacity absolute z-10 max-w-5xl w-full h-full pt-8 md:pt-0 md:h-fit md:mt-16">
             <ContactForm showForm={showForm} handleFormButton={handleFormButton} />
           </motion.div>
         )}

@@ -65,7 +65,7 @@ export default function ProjectsSection() {
       <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
       <SlideFromTopOrBottom>
-        <div className="max-w-[90%] mx-auto h-full text-center pt-16 xl:pb-24">
+        <div className="px-2 md:px-0 md:max-w-[90%] mx-auto h-full text-center pt-16 xl:pb-24">
           <h2 className="text-4xl font-bold mb-8">{t("title")}</h2>
           <Swiper
             modules={[Pagination, Navigation, EffectCoverflow]}
