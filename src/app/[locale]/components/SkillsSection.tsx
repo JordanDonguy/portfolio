@@ -7,8 +7,8 @@ export default function SkillsSection() {
 
   const languagesList = ["JavaScript", "TypeScript"];
   const frontEndList = ["HTML5", "CSS", "NextdotJs", "React", "React Router", "Redux", "Tailwind CSS"];
-  const backEndList = ["NodedotJs", "ExpressdotJs", "PostgreSQL", "Prisma", "Sequelize",];
-  const toolsList = ["Git", "GitHub", "Jest", "GH Actions", "ESLint", "JWT", "Cloudflare", "Vercel", "Supabase", "Neon"]
+  const backEndList = ["NodedotJs", "ExpressdotJs", "PostgreSQL", "Prisma", "Sequelize", "JWT"];
+  const toolsList = ["Git", "GitHub", "Jest", "ESLint", "GH Actions", "Docker", "Cloudflare", "Vercel", "Supabase", "Neon"]
 
   return (
     <section id="skills" className="relative w-full min-h-screen overflow-hidden pb-10 border-b-2 md:border-0 border-zinc-700">
