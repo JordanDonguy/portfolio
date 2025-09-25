@@ -47,7 +47,7 @@ export default function Navbar() {
 
       {/* Navbar Desktop */}
       <nav className="w-full h-16 hidden md:block bg-glass border-b border-zinc-700 shadow-md">
-        <div className="max-w-7xl h-full mx-auto flex justify-between items-center md:pr-5 xl:px-0">
+        <div className="max-w-7xl h-full mx-auto flex justify-between items-center md:pr-5 xl:px-5">
           <a href="#home" className="font-bold text-xl text-cyan-500 pl-5 xl:pl-0 hover:scale-110 active:scale-90 duration-100">Portfolio</a>
           <ul className="hidden md:flex space-x-3 lg:space-x-6 pr-5 lg:pr-0 items-center">
             {sectionIds.map(id =>

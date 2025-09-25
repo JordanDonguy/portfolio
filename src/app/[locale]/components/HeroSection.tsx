@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useActiveSection } from "./utils/useActiveSection";
 import ContactForm from "./ContactForm";
-import AnimatedHeroBorders from "./animations/AnimatedHeroBorders";
 import AnimatedHeroText from "./animations/AnimatedHeroText";
+import { SlideFromLeft } from "./animations/SlideFromLeft";
 
 export default function HeroSection() {
   const { activeSection } = useActiveSection(["home", "about"], 0.6)
@@ -21,7 +21,10 @@ export default function HeroSection() {
   }, [activeSection]);
 
   return (
-    <section id="home" className="relative w-full overflow-hidden mx-auto h-[100svh] flex flex-col items-center text-center justify-center">
+    <section id="home"
+      className="relative w-full overflow-hidden mx-auto min-h-[100svh] md:py-16 flex flex-col 
+    lg:flex-row gap-[2%] lg:px-5 items-center justify-center lg:justify-evenly text-center lg:text-start"
+    >
 
       <AnimatePresence>
         {showForm && (
@@ -40,15 +43,15 @@ export default function HeroSection() {
         )}
       </AnimatePresence>
 
-      <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <div className="relative duration-200 border-zinc-700 mt-16 rounded-asym w-full max-h-[700px] h-full md:h-fit lg:w-6xl">
-        {/* Animated borders */}
-        <AnimatedHeroBorders showForm={showForm} />
-
-        {/* Animated text, buttons and background */}
-        <AnimatedHeroText showForm={showForm} handleFormButton={handleFormButton} />
+      {/* Animated image */}
+      <div className="w-1/2 lg:w-1/3 hidden md:block">
+        <SlideFromLeft>
+          <img src="/img/hero-image.webp" alt="hero-image" />
+        </SlideFromLeft>
       </div>
+
+      {/* Animated text and buttons */}
+      <AnimatedHeroText handleFormButton={handleFormButton} />
     </section>
   )
 }

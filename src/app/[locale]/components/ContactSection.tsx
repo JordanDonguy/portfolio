@@ -12,16 +12,14 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative w-full min-h-screen pb-12">
-      <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 right-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 left-0 max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <div className="max-w-7xl mx-auto text-center pt-24">
-        <h2 className="text-4xl font-bold mb-12 xl:mb-16">Contact</h2>
+      <div className="text-center">
+        <h2 className="text-4xl font-bold py-8 md:py-16 bg-[rgb(28,32,40))] w-full">Contact</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:px-5 lg:px-0 lg:gap-12">
+        <div className="max-w-7xl mx-auto pt-8 grid grid-cols-1 xl:grid-cols-3 md:px-5 xl:px-2 xl:gap-12">
           <SlideFromLeft>
             <div className='col-span-1 h-full flex flex-col'>
               <h3 className='text-2xl mb-4 md:mb-8'>{t("informations")}</h3>
-              <div className="space-y-6 h-full md:border border-zinc-700 rounded-4xl py-6 px-2 md:p-6 bg-glass">
+              <div className="space-y-6 h-full md:border border-zinc-700 rounded-4xl py-6 px-2 md:p-6 bg-glass lg:mb-6 xl:mb-0">
                 <a
                   href="mailto:jordan.donguy@gmail.com"
                   aria-label="Send an email to jordan.donguy@gmail.com"

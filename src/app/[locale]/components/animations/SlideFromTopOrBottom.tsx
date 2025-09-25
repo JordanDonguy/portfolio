@@ -25,7 +25,7 @@ export const SlideFromTopOrBottom = ({ children }: SlideFromTopOrBottom) => {
       } else {
         // Desktop threshold
         setThreshold(0.6);
-        setMargin(250)
+        setMargin(150)
       }
     };
 

@@ -18,7 +18,7 @@ export const SlideFromRight = ({ children }: SlideFromRightProps) => {
         setThreshold(0.15);
       } else {
         // Desktop
-        setThreshold(0.6);
+        setThreshold(0.4);
       }
     };
 

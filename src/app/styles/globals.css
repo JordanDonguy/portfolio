@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 639px) and (hover: none) and (pointer: coarse) {
   :root {
-    --background: rgb(14, 14, 14);
+    --background: rgb(11, 11, 11);
     /* very dark gray instead of pure black to prevent OLED screen flickering */
   }
 }
@@ -84,7 +84,7 @@ body {
 }
 
 .bg-glass2 {
-  background-color: rgba(11, 11, 14, 0.85);
+  background-color: rgba(11, 11, 14, 0.95);
   backdrop-filter: blur(12px);
 }
 
@@ -130,6 +130,7 @@ body {
 .swiper-button-next,
 .swiper-button-prev {
   transition-duration: 100ms;
+  margin: 0px 3rem;
 }
 
 .swiper-button-prev:hover {
@@ -147,3 +148,17 @@ body {
 .swiper-button-next:active {
   transform: scale(0.9);
 }
+
+@media screen and (max-width: 1024px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin: 0px 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+} 

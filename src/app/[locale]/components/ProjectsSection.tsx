@@ -61,12 +61,10 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="relative w-full min-h-screen xl:h-screen">
-      <img src="/img/left.svg" loading="lazy" alt="" className="absolute z-[-1] top-0 left-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <img src="/img/right.svg" loading="lazy" alt="" className="absolute z-[-1] bottom-0 right-0 scale-y-[-1] max-w-1/2 lg:max-w-1/3 aspect-auto" />
-      <SlideFromTopOrBottom>
-        <div className="px-2 md:px-0 md:max-w-[90%] mx-auto h-full text-center pt-16 xl:pb-24">
-          <h2 className="text-4xl font-bold mb-8">{t("title")}</h2>
+    <section id="projects" className="relative w-full">
+      <div className="h-full text-center py-8">
+        <h2 className="text-4xl font-bold py-8 md:py-16 mb-8 bg-[rgb(28,32,40))] w-full">{t("title")}</h2>
+        <SlideFromTopOrBottom>
           <Swiper
             modules={[Pagination, Navigation, EffectCoverflow]}
             loop={projectList.length > 2}
@@ -85,7 +83,7 @@ export default function ProjectsSection() {
             className="!hidden md:!block w-full h-full mySwiper"
           >
             {projectList.map(project =>
-              <SwiperSlide key={project.title} className="h-auto min-h-[900px] lg:min-h-[1000px] xl:min-h-fit bg-glass rounded-asym border-y border-zinc-700 xl:mb-40">
+              <SwiperSlide key={project.title} className="pb-8">
                 <ProjectCard
                   title={project.title}
                   img={project.img}
@@ -101,7 +99,7 @@ export default function ProjectsSection() {
           <div className="md:hidden w-full h-full">
             {projectList.map(project =>
               <div key={project.title}
-                className={`h-full bg-glass border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) ? "mb-16  border-b" : "pb-12 border-b-2"}`}>
+                className={`h-full bg-glass border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) ? "mb-16  border-b" : "border-b-2"}`}>
                 <ProjectCard
                   key={project.title}
                   title={project.title}
@@ -115,8 +113,8 @@ export default function ProjectsSection() {
               </div>
             )}
           </div>
-        </div>
-      </SlideFromTopOrBottom>
+        </SlideFromTopOrBottom>
+      </div>
     </section>
   )
 }
