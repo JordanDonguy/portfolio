@@ -45,11 +45,13 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: delay, ease: "easeOut" }}>
 
-      {/* Navbar Desktop */}
+      {/* ----------- Navbar Desktop ----------- */}
       <nav className="w-full h-16 hidden md:block bg-glass border-b border-zinc-700 shadow-md">
-        <div className="max-w-7xl h-full mx-auto flex justify-between items-center md:pr-5 xl:px-5">
-          <a href="#home" className="font-bold text-xl text-cyan-500 pl-5 xl:pl-0 hover:scale-110 active:scale-90 duration-100">Portfolio</a>
-          <ul className="hidden md:flex space-x-3 lg:space-x-6 pr-5 lg:pr-0 items-center">
+        <div className="max-w-7xl h-full mx-auto flex justify-between items-center px-5">
+          <a href="#home" className="font-bold text-xl text-cyan-500 hover:scale-110 active:scale-90 duration-100">Portfolio</a>
+          <ul className="hidden md:flex space-x-3 lg:space-x-6 items-center">
+
+            {/* ----------- Section links ----------- */}
             {sectionIds.map(id =>
               <li key={id}>
                 <a
@@ -62,6 +64,8 @@ export default function Navbar() {
                 </a>
               </li>
             )}
+
+            {/* ----------- Locale switch button ----------- */}
             <li className="h-full">
               <button
                 onClick={switchLocale}
@@ -71,11 +75,12 @@ export default function Navbar() {
                 <span className="hidden group-hover:block">{(locale === "en" ? "fr" : "en").toUpperCase()}</span>
               </button>
             </li>
+
           </ul>
         </div>
       </nav>
 
-      {/* Navbar Mobile */}
+      {/* ----------- Navbar Mobile ----------- */}
       <nav className="md:hidden w-full h-16 border-b border-zinc-700 shadow-md">
         <div className="w-full h-full bg-[rgba(11,11,14,0.5)] backdrop-blur-md flex justify-between items-center">
           <a href="#home" className="font-bold text-xl text-cyan-500 pl-4">Portfolio</a>
@@ -95,11 +100,15 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 300, damping: 28 }}
               className="fixed w-screen h-[100svh] flex flex-col items-center justify-center top-16 md:hidden z-50 bg-[rgba(11,11,16,0.98)]">
               <ul className="flex flex-col w-full h-full max-h-[700px] justify-evenly items-center pb-16">
+
+                {/* ----------- Locale switch button ----------- */}
                 <li>
                   <button onClick={switchLocale} className="bg-[rgba(54,54,63,0.3)] px-6 py-3 border-2 border-zinc-500 rounded-lg hover:bg-gray-300 text-sm font-bold active:scale-90">
                     {locale.toUpperCase()}
                   </button>
                 </li>
+
+                {/* ----------- Section links ----------- */}
                 {sectionIds.map(id =>
                   <li key={id}>
                     <a
@@ -112,8 +121,8 @@ export default function Navbar() {
                     </a>
                   </li>
                 )}
-              </ul>
 
+              </ul>
             </motion.div>
           )}
         </AnimatePresence>

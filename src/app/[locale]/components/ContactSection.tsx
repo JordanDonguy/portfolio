@@ -16,6 +16,8 @@ export default function ContactSection() {
         <h2 className="text-4xl font-bold py-8 md:py-16 bg-[rgb(28,32,40))] w-full">Contact</h2>
 
         <div className="max-w-7xl mx-auto pt-8 grid grid-cols-1 xl:grid-cols-3 md:px-5 xl:px-2 xl:gap-12">
+
+          {/* ----------- Contact informations ----------- */}
           <SlideFromLeft>
             <div className='col-span-1 h-full flex flex-col'>
               <h3 className='text-2xl mb-4 md:mb-8'>{t("informations")}</h3>
@@ -59,6 +61,7 @@ export default function ContactSection() {
             </div>
           </SlideFromLeft>
 
+          {/* ----------- Contact form ----------- */}
           <div className="col-span-2 h-full mt-12 lg:mt-0">
             <SlideFromRight>
               <ContactForm />

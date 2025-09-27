@@ -21,10 +21,10 @@ export const SlideFromTopOrBottom = ({ children }: SlideFromTopOrBottom) => {
       if (window.innerWidth < 768) {
         // Mobile/tablet
         setThreshold(0.1);
-        setMargin(1500)
+        setMargin(600)
       } else {
         // Desktop threshold
-        setThreshold(0.6);
+        setThreshold(0.3);
         setMargin(150)
       }
     };

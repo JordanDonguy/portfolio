@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useActiveSection } from "./utils/useActiveSection";
@@ -22,10 +23,11 @@ export default function HeroSection() {
 
   return (
     <section id="home"
-      className="relative w-full overflow-hidden mx-auto min-h-[100svh] md:py-16 flex flex-col 
-    lg:flex-row gap-[2%] lg:px-5 items-center justify-center lg:justify-evenly text-center lg:text-start"
+      className="relative w-full overflow-hidden mx-auto min-h-[100svh] md:py-20 flex flex-col max-w-5xl xl:max-w-7xl
+    lg:flex-row gap-[10%] lg:pl-[2%] xl:pl-5 items-center justify-center xl:justify-between text-center lg:text-start"
     >
 
+      {/* -------- Contact form (overlay) -------- */}
       <AnimatePresence>
         {showForm && (
           <motion.div
@@ -37,20 +39,39 @@ export default function HeroSection() {
               scale: { type: "tween", duration: 0.3, ease: "easeInOut" },
               opacity: { type: "tween", duration: 0.2, ease: "easeInOut" },
             }}
-            className="will-change-transform will-change-opacity absolute z-10 max-w-5xl w-full h-full pt-8 md:pt-0 md:h-fit md:mt-16">
+            className="will-change-transform will-change-opacity absolute z-30 w-full h-full pt-8 md:pt-0 md:h-fit md:mt-16">
             <ContactForm showForm={showForm} handleFormButton={handleFormButton} />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Animated image */}
-      <div className="w-1/2 lg:w-1/3 hidden md:block">
+      {/* -------- Animated image -------- */}
+      <div className="h-90 lg:h-full shrink-0 hidden md:block">
         <SlideFromLeft>
-          <img src="/img/hero-image.webp" alt="hero-image" />
+          {/* Medium and small screen */}
+          <Image
+            src="/img/hero-image.webp"
+            alt="hero-image"
+            width={380}
+            height={450}
+            quality={100}
+            priority={true}
+            className="hidden xl:block"
+          />
+          {/* Large screen */}
+          <Image
+            src="/img/hero-image.webp"
+            alt="hero-image"
+            width={320}
+            height={400}
+            quality={100}
+            priority={true}
+            className="block xl:hidden"
+          />
         </SlideFromLeft>
       </div>
 
-      {/* Animated text and buttons */}
+      {/* -------- Animated text and buttons -------- */}
       <AnimatedHeroText handleFormButton={handleFormButton} />
     </section>
   )

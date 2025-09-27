@@ -56,14 +56,16 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
 
   return (
     <form onSubmit={handleSubmit}
-    className={`${showForm ? "rounded-asym2 items-center bg-glass2 md:border backdrop-blur-md border-zinc-700" : "rounded-asym"} 
+    className={`${showForm ? "rounded-asym2 items-center bg-glass2 md:border backdrop-blur-md border-zinc-700 max-w-5xl mx-auto" : "rounded-asym"} 
     w-full h-full flex flex-col md:justify-center`}
     >
       <fieldset className="h-full w-full">
         <legend className={`${showForm && "hidden"} w-full text-center text-2xl md:mb-8`}>{t("form")}</legend>
         <div
-          className={`${!showForm && "bg-glass md:border rounded-asym pb-10 lg:pb-8"} flex flex-col w-full h-full gap-8 border-zinc-700 w-full p-4 md:p-6 relative`}
+          className={`${!showForm && "bg-glass md:border rounded-asym pb-10 lg:pb-8"} flex flex-col h-full gap-8 border-zinc-700 w-full p-4 md:p-6 relative`}
         >
+
+          {/* -------- Close button (only if overlay) -------- */}
           {showForm && (
             <button
               type="button"
@@ -74,6 +76,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
             </button>
           )}
 
+          {/* -------- Name input -------- */}
           <div className={`${showForm && "mt-10"} mt-8 w-full flex flex-col`}>
             <label htmlFor="name" className="text-start mb-2">
               {t("name")}
@@ -91,6 +94,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               onChange={handleChange}
             />
           </div>
+
+          {/* -------- Email input -------- */}
           <div className="w-full flex flex-col">
             <label htmlFor="email" className="text-start mb-2">
               Email
@@ -108,6 +113,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               onChange={handleChange}
             />
           </div>
+
+          {/* -------- Subject input -------- */}
           <div className="w-full flex flex-col">
             <label htmlFor="subject" className="text-start mb-2">
               {t("subject")}
@@ -125,6 +132,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
               onChange={handleChange}
             />
           </div>
+
+          {/* -------- Message textarea -------- */}
           <div className="w-full flex flex-col h-full flex-1">
             <label htmlFor="message" className="text-start mb-2">
               Message
@@ -143,6 +152,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
             />
           </div>
 
+          {/* -------- Submit button -------- */}
           <button
             type="submit"
             disabled={status === "loading"}
@@ -154,6 +164,7 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
             <p className="px-2 text-lg">{t("submit")}</p>
           </button>
 
+          {/* -------- Status message -------- */}
           {status === "success" && <p role="status" className="lg:w-full text-center text-green-500">Message sent successfully!</p>}
           {status === "error" && <p role="status" className="lg:w-full text-center text-red-500">Failed to send message. Please try again.</p>}
         </div>

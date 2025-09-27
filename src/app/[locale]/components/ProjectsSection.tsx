@@ -24,7 +24,6 @@ export default function ProjectsSection() {
   const prismaBadge = { name: "Prisma", url: "https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white&style=flat" };
   const supabaseBadge = { name: "Supabase", url: "https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white&style=flat" };
   const neonBadge = { name: "Neon", url: "/img/badge/neon.webp" };
-  const northflankBadge = { name: "Northflank", url: "/img/badge/Northflank.webp" };
   const cloudflareBadge = { name: "Cloudflare", url: "https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white&style=flat" };
   const geminiBadge = { name: "Gemini", url: "https://img.shields.io/badge/Google Gemini-8E75B2?logo=google gemini&logoColor=white&style=flat" };
   const mistralBadge = { name: "Mistral", url: "https://img.shields.io/badge/Mistral AI-FA520F?logo=Mistral AI&logoColor=white&style=flat" };
@@ -54,7 +53,7 @@ export default function ProjectsSection() {
       img: "/img/projects/guitar-shop.webp",
       img_mobile: "/img/projects/guitar-shop-mobile.webp",
       description: t("guitar-shop"),
-      tech_stack: [reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, cloudflareBadge, northflankBadge, supabaseBadge],
+      tech_stack: [reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, cloudflareBadge, supabaseBadge],
       live_url: "https://app.guitar-shop.store",
       github_url: "https://github.com/JordanDonguy/guitar-shop-frontend",
     },
@@ -64,6 +63,8 @@ export default function ProjectsSection() {
     <section id="projects" className="relative w-full">
       <div className="h-full text-center py-8">
         <h2 className="text-4xl font-bold py-8 md:py-16 mb-8 bg-[rgb(28,32,40))] w-full">{t("title")}</h2>
+
+        {/* ----------- Desktop and tablet ----------- */}
         <SlideFromTopOrBottom>
           <Swiper
             modules={[Pagination, Navigation, EffectCoverflow]}
@@ -96,10 +97,14 @@ export default function ProjectsSection() {
               </SwiperSlide>
             )}
           </Swiper>
-          <div className="md:hidden w-full h-full">
-            {projectList.map(project =>
+        </SlideFromTopOrBottom>
+
+        {/* ----------- Mobile ----------- */}
+        <div className="md:hidden w-full h-full">
+          {projectList.map(project =>
+            <SlideFromTopOrBottom key={project.title}>
               <div key={project.title}
-                className={`h-full bg-glass border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) ? "mb-16  border-b" : "border-b-2"}`}>
+                className={`h-full bg-glass border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) ? "mb-12 border-b" : ""}`}>
                 <ProjectCard
                   key={project.title}
                   title={project.title}
@@ -111,9 +116,10 @@ export default function ProjectsSection() {
                   github_url={project.github_url}
                 />
               </div>
-            )}
-          </div>
-        </SlideFromTopOrBottom>
+            </SlideFromTopOrBottom>
+          )}
+        </div>
+
       </div>
     </section>
   )

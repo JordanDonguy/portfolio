@@ -5,9 +5,10 @@ import { useRef, useState, useEffect, ReactNode } from 'react';
 
 interface SlideFromRightProps {
   children: ReactNode;
+  delay?: number;
 }
 
-export const SlideFromRight = ({ children }: SlideFromRightProps) => {
+export const SlideFromRight = ({ children, delay = 0 }: SlideFromRightProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
     const [threshold, setThreshold] = useState(0.2)
@@ -28,13 +29,14 @@ export const SlideFromRight = ({ children }: SlideFromRightProps) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-    const isInView = useInView(ref, { once: true, amount: threshold, margin: '250px' });
+    const isInView = useInView(ref, { once: true, amount: threshold });
   return (
     <motion.div
       ref={ref}
       initial={{ x: 200, opacity: 0 }}
       animate={isInView ? { x: 0, opacity: 1 } : {}}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+      transition={{ duration: 0.8, ease: 'easeOut', delay }}
+      className="z-20"
     >
       {children}
     </motion.div>

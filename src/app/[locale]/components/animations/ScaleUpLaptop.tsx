@@ -1,14 +1,13 @@
-// components/animations/SlideFromLeft.tsx
 'use client';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect, ReactNode } from 'react';
 
-interface SlideFromLeftProps {
+interface ScaleUpProps {
   children: ReactNode;
   delay?: number;
 }
 
-export const SlideFromLeft = ({ children, delay = 0 }: SlideFromLeftProps) => {
+export const ScaleUpLaptop = ({ children, delay = 0 }: ScaleUpProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
     const [threshold, setThreshold] = useState(0.2)
@@ -16,7 +15,7 @@ export const SlideFromLeft = ({ children, delay = 0 }: SlideFromLeftProps) => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         // Mobile/tablet
-        setThreshold(0.2);
+        setThreshold(0.15);
       } else {
         // Desktop
         setThreshold(0.4);
@@ -29,14 +28,14 @@ export const SlideFromLeft = ({ children, delay = 0 }: SlideFromLeftProps) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-    const isInView = useInView(ref, { once: true, amount: threshold });
+    const isInView = useInView(ref, { once: true, amount: threshold, margin: '100px 0px 100px 0px' });
   return (
     <motion.div
       ref={ref}
-      initial={{ x: -200, opacity: 0 }}
-      animate={isInView ? { x: 0, opacity: 1 } : {}}
+      initial={{ scaleY: 0 }}
+      animate={isInView ? { scaleY: 1 } : {}}
       transition={{ duration: 0.8, ease: 'easeOut', delay }}
-      className="z-20"
+      className="hidden md:block col-span-1 mx-auto w-3xl xl:w-4xl lg:absolute right-[-100px] xl:right-[-150px] top-30 z-0"
     >
       {children}
     </motion.div>
