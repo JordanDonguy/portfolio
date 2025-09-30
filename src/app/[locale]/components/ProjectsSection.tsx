@@ -12,6 +12,7 @@ import ProjectCard from './ProjectCard';
 export default function ProjectsSection() {
   const t = useTranslations("projects")
 
+  const jsBadge = { name: "JavaScript", url: "https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white&style=flat" };
   const tsBadge = { name: "TypeScript", url: "https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white&style=flat" };
   const reactBadge = { name: "React.js", url: "https://img.shields.io/badge/React-61DAFB?logo=React&logoColor=white&style=flat" };
   const reactRouterBadge = { name: "React Router", url: "https://img.shields.io/badge/React Router-CA4245?logo=reactrouter&logoColor=white&style=flat" };
@@ -23,11 +24,15 @@ export default function ProjectsSection() {
   const vercelBadge = { name: "Vercel", url: "https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white&style=flat" };
   const prismaBadge = { name: "Prisma", url: "https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white&style=flat" };
   const supabaseBadge = { name: "Supabase", url: "https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white&style=flat" };
-  const neonBadge = { name: "Neon", url: "/img/badge/neon.webp" };
   const cloudflareBadge = { name: "Cloudflare", url: "https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white&style=flat" };
   const geminiBadge = { name: "Gemini", url: "https://img.shields.io/badge/Google Gemini-8E75B2?logo=google gemini&logoColor=white&style=flat" };
   const mistralBadge = { name: "Mistral", url: "https://img.shields.io/badge/Mistral AI-FA520F?logo=Mistral AI&logoColor=white&style=flat" };
   const jestBadge = { name: "Jest", url: "https://img.shields.io/badge/Jest-C21325?logo=Jest&logoColor=white&style=flat" };
+  const dockerBadge = { name: "Docker", url: "https://img.shields.io/badge/Docker-2496ED?logo=Docker&logoColor=white&style=flat" };
+  const hetznerBadge = { name: "Hetzner", url: "https://img.shields.io/badge/Hetzner-D50C2D?logo=Hetzner&logoColor=white&style=flat" };
+  const nginxBadge = { name: "Nginx", url: "https://img.shields.io/badge/Nginx-009639?logo=Nginx&logoColor=white&style=flat" };
+  const ghActionsBadge = { name: "GitHub Actions", url: "https://img.shields.io/badge/GitHub Actions-2088FF?logo=Github Actions&logoColor=white&style=flat" };
+
 
   const projectList = [
     {
@@ -35,7 +40,7 @@ export default function ProjectsSection() {
       img: "/img/projects/traduxo.webp",
       img_mobile: "/img/projects/traduxo-mobile.webp",
       description: t("traduxo"),
-      tech_stack: [tsBadge, nextJsBadge, geminiBadge, tailwindBadge, prismaBadge, jestBadge, vercelBadge, neonBadge, cloudflareBadge],
+      tech_stack: [tsBadge, nextJsBadge, geminiBadge, tailwindBadge, postgresqlBadge, prismaBadge, jestBadge, dockerBadge, ghActionsBadge, hetznerBadge, nginxBadge, cloudflareBadge],
       live_url: "https://traduxo.app",
       github_url: "https://github.com/JordanDonguy/traduxo",
     },
@@ -44,7 +49,7 @@ export default function ProjectsSection() {
       img: "/img/projects/aria.webp",
       img_mobile: "/img/projects/aria-mobile.webp",
       description: t("aria"),
-      tech_stack: [tsBadge, nextJsBadge, mistralBadge, tailwindBadge, vercelBadge, supabaseBadge],
+      tech_stack: [tsBadge, nextJsBadge, mistralBadge, tailwindBadge, postgresqlBadge, vercelBadge, supabaseBadge],
       live_url: "https://chat-with-aria.vercel.app",
       github_url: "https://github.com/JordanDonguy/aria",
     },
@@ -53,7 +58,7 @@ export default function ProjectsSection() {
       img: "/img/projects/guitar-shop.webp",
       img_mobile: "/img/projects/guitar-shop-mobile.webp",
       description: t("guitar-shop"),
-      tech_stack: [reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, cloudflareBadge, supabaseBadge],
+      tech_stack: [jsBadge, reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, cloudflareBadge, supabaseBadge],
       live_url: "https://app.guitar-shop.store",
       github_url: "https://github.com/JordanDonguy/guitar-shop-frontend",
     },

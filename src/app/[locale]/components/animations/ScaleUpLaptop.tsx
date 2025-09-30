@@ -34,7 +34,7 @@ export const ScaleUpLaptop = ({ children, delay = 0 }: ScaleUpProps) => {
       ref={ref}
       initial={{ scaleY: 0 }}
       animate={isInView ? { scaleY: 1 } : {}}
-      transition={{ duration: 0.8, ease: 'easeOut', delay }}
+      transition={{ duration: 0.8, ease: "linear", delay }}
       className="hidden md:block col-span-1 mx-auto w-3xl xl:w-4xl lg:absolute right-[-100px] xl:right-[-150px] top-30 z-0"
     >
       {children}

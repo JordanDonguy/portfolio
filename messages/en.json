@@ -28,7 +28,7 @@
     "title": "Projects",
     "live-app": "Live app",
     "tech-stack": "Tech stack",
-    "traduxo": "A Next.js web app offering AI-powered, native-like translations with idiomatic expression suggestions and real-world explanations via the Gemini API. Users can type or speak text, get translations, expression suggestions, detailed explanations, access history, and save favorites. Showcases AI integration, advanced translation features, and responsive UI, deployed on Vercel.",
+    "traduxo": "A Next.js web app providing AI-powered, native-like translations with idiomatic suggestions and real-world explanations via the Gemini API. Users can type or speak text, access translation history, and save favorites. Highlights AI integration, advanced translation features, and a responsive UI. Deployed on a Hetzner VPS with Docker, using Nginx and Cloudflare reverse proxy, with a CI/CD pipeline for automated deployments.",
     "aria": "A Next.js web app offering a modern, minimalistic AI chatbot powered by the Mistral API and backed by Supabase. Users can chat naturally, with authentication, secure input validation, conversation history, and responsive UI. Showcases AI integration, real-time database handling, and seamless frontend-backend interaction, deployed on Vercel.",
     "guitar-shop": "A responsive e-commerce web app for browsing and purchasing guitars. Users can view product details, manage a cart, and check out. The app also features Google OAuth login, newsletter subscription and dynamic product filtering."
   },
