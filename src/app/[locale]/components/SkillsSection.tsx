@@ -6,7 +6,7 @@ export default function SkillsSection() {
   const t = useTranslations("skills");
 
   const languagesList = ["JavaScript", "TypeScript"];
-  const frontEndList = ["HTML5", "CSS", "NextdotJs", "React", "React Router", "Redux", "Tailwind CSS"];
+  const frontEndList = ["HTML5", "CSS", "NextdotJs", "React", "React Router", "Expo", "Redux", "Tailwind CSS"];
   const backEndList = ["NodedotJs", "ExpressdotJs", "PostgreSQL", "Prisma", "Sequelize", "JWT"];
   const toolsList = ["Git", "GitHub", "Jest", "ESLint", "GH Actions", "Docker", "Cloudflare", "Vercel", "Supabase"]
 
