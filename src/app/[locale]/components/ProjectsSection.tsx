@@ -18,6 +18,7 @@ export default function ProjectsSection() {
   const reactRouterBadge = { name: "React Router", url: "https://img.shields.io/badge/React Router-CA4245?logo=reactrouter&logoColor=white&style=flat" };
   const nextJsBadge = { name: "Next.js", url: "https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white&style=flat" };
   const tailwindBadge = { name: "Tailwind", url: "https://img.shields.io/badge/Tailwind CSS-06B6D4?logo=tailwindcss&logoColor=white&style=flat" };
+  const expoBadge = { name: "Expo", url: "https://img.shields.io/badge/Expo-1B1F23?logo=expo&logoColor=white&style=flat" };
   const nodeBadge = { name: "Node.js", url: "https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=white&style=flat" };
   const expressBadge = { name: "Express.js", url: "https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white&style=flat" };
   const postgresqlBadge = { name: "PostgreSQL", url: "https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=flat" };
@@ -28,6 +29,7 @@ export default function ProjectsSection() {
   const geminiBadge = { name: "Gemini", url: "https://img.shields.io/badge/Google Gemini-8E75B2?logo=google gemini&logoColor=white&style=flat" };
   const mistralBadge = { name: "Mistral", url: "https://img.shields.io/badge/Mistral AI-FA520F?logo=Mistral AI&logoColor=white&style=flat" };
   const jestBadge = { name: "Jest", url: "https://img.shields.io/badge/Jest-C21325?logo=Jest&logoColor=white&style=flat" };
+  const vitestBadge = { name: "Vitest", url: "https://img.shields.io/badge/Vitest-6C6C6C?logo=Vitest&logoColor=white&style=flat" };
   const dockerBadge = { name: "Docker", url: "https://img.shields.io/badge/Docker-2496ED?logo=Docker&logoColor=white&style=flat" };
   const hetznerBadge = { name: "Hetzner", url: "https://img.shields.io/badge/Hetzner-D50C2D?logo=Hetzner&logoColor=white&style=flat" };
   const nginxBadge = { name: "Nginx", url: "https://img.shields.io/badge/Nginx-009639?logo=Nginx&logoColor=white&style=flat" };
@@ -40,9 +42,18 @@ export default function ProjectsSection() {
       img: "/img/projects/traduxo.webp",
       img_mobile: "/img/projects/traduxo-mobile.webp",
       description: t("traduxo"),
-      tech_stack: [tsBadge, nextJsBadge, geminiBadge, tailwindBadge, postgresqlBadge, prismaBadge, jestBadge, dockerBadge, ghActionsBadge, hetznerBadge, nginxBadge, cloudflareBadge],
+      tech_stack: [tsBadge, nextJsBadge, geminiBadge, tailwindBadge, expoBadge, postgresqlBadge, prismaBadge, jestBadge, dockerBadge, ghActionsBadge, hetznerBadge, nginxBadge, cloudflareBadge],
       live_url: "https://traduxo.app",
       github_url: "https://github.com/JordanDonguy/traduxo",
+    },
+    {
+      title: "BlaBlaBook",
+      img: "/img/projects/blablabook.webp",
+      img_mobile: "/img/projects/blablabook-mobile.webp",
+      description: t("blablabook"),
+      tech_stack: [tsBadge, nextJsBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, prismaBadge, vitestBadge, dockerBadge, ghActionsBadge, hetznerBadge, nginxBadge, supabaseBadge],
+      live_url: "https://blablabook.space",
+      github_url: "https://github.com/BlaBlaBook",
     },
     {
       title: "Aria",
