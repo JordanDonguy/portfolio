@@ -26,7 +26,7 @@ export default function ProjectCard({ title, img, img_mobile, description, tech_
       <h3 className='text-2xl lg:text-3xl 2xl:text-4xl mb-4 lg:mb-6 text-center lg:text-start'>{title}</h3>
 
       {/* ----------- Description ----------- */}
-      <p className='text-gray-200 text-sm xl:text-base 2xl:text-[1.05rem] mb-6'>{description}</p>
+      <p className='text-gray-200 text-xs xl:text-sm 2xl:text-base mb-6'>{description}</p>
 
       {/* ----------- Tech stack ----------- */}
       <div className='mb-6'>

@@ -30,9 +30,21 @@ export default function ProjectsSection() {
   const hetznerBadge = { name: "Hetzner", url: "https://img.shields.io/badge/Hetzner-D50C2D?logo=Hetzner&logoColor=white&style=flat" };
   const nginxBadge = { name: "Nginx", url: "https://img.shields.io/badge/Nginx-009639?logo=Nginx&logoColor=white&style=flat" };
   const ghActionsBadge = { name: "GitHub Actions", url: "https://img.shields.io/badge/GitHub Actions-2088FF?logo=Github Actions&logoColor=white&style=flat" };
+  const redisBadge = { name: "Redis", url: "https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white&style=flat" };
+  const zodBadge = { name: "Zod", url: "https://img.shields.io/badge/Zod-3E67B1?logo=zod&logoColor=white&style=flat" };
+  const biomeBadge = { name: "Biome", url: "https://img.shields.io/badge/Biome-60A5FA?logo=biome&logoColor=white&style=flat" };
 
 
   const projectList = [
+    {
+      title: "PRilot",
+      img: "/img/projects/prilot.webp",
+      img_mobile: "/img/projects/prilot-mobile.webp",
+      description: t("prilot"),
+      tech_stack: [tsBadge, nextJsBadge, tailwindBadge, postgresqlBadge, prismaBadge, redisBadge, zodBadge, biomeBadge, dockerBadge, vercelBadge],
+      live_url: "https://prilot.dev",
+      github_url: "https://github.com/JordanDonguy/prilot",
+    },
     {
       title: "Traduxo",
       img: "/img/projects/traduxo.webp",
