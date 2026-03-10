@@ -1,12 +1,8 @@
 "use client";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Pagination, Navigation, EffectCoverflow } from 'swiper/modules';
 import { useTranslations } from "next-intl";
-import { SlideFromTopOrBottom } from "./animations/SlideFromTopOrBottom";
+import { SlideFromLeft } from "./animations/SlideFromLeft";
+import { SlideFromRight } from "./animations/SlideFromRight";
 import ProjectCard from './ProjectCard';
 
 export default function ProjectsSection() {
@@ -80,60 +76,28 @@ export default function ProjectsSection() {
       <div className="h-full text-center py-8">
         <h2 className="text-4xl font-bold py-8 md:py-16 mb-8 bg-[rgb(28,32,40))] w-full">{t("title")}</h2>
 
-        {/* ----------- Desktop and tablet ----------- */}
-        <SlideFromTopOrBottom>
-          <Swiper
-            modules={[Pagination, Navigation, EffectCoverflow]}
-            loop={projectList.length > 2}
-            effect={'coverflow'}
-            centeredSlides={true}
-            slidesPerView={'auto'}
-            coverflowEffect={{
-              rotate: 100,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-            }}
-            navigation={projectList.length > 2}
-            spaceBetween={100}
-            pagination={projectList.length > 2}
-            className="!hidden md:!block w-full h-full mySwiper"
-          >
-            {projectList.map(project =>
-              <SwiperSlide key={project.title} className="pb-8">
-                <ProjectCard
-                  title={project.title}
-                  img={project.img}
-                  img_mobile={project.img_mobile}
-                  description={project.description}
-                  tech_stack={project.tech_stack}
-                  live_url={project.live_url}
-                  github_url={project.github_url}
-                />
-              </SwiperSlide>
-            )}
-          </Swiper>
-        </SlideFromTopOrBottom>
+        <div className="max-w-7xl mx-auto space-y-12 lg:space-y-20">
+          {projectList.map((project, index) => {
+            const imagePosition = index % 2 === 0 ? "left" : "right";
+            const AnimationWrapper = imagePosition === "left" ? SlideFromLeft : SlideFromRight;
 
-        {/* ----------- Mobile ----------- */}
-        <div className="md:hidden w-full h-full">
-          {projectList.map(project =>
-            <SlideFromTopOrBottom key={project.title}>
-              <div key={project.title}
-                className={`h-full bg-glass border-zinc-700 ${(projectList.findIndex(x => x === project)) < (projectList.length - 1) ? "mb-12 border-b" : ""}`}>
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  img={project.img}
-                  img_mobile={project.img_mobile}
-                  description={project.description}
-                  tech_stack={project.tech_stack}
-                  live_url={project.live_url}
-                  github_url={project.github_url}
-                />
-              </div>
-            </SlideFromTopOrBottom>
-          )}
+            return (
+              <AnimationWrapper key={project.title}>
+                <div className={`${index < projectList.length - 1 ? "border-b border-zinc-700/50 pb-12 lg:pb-20" : ""}`}>
+                  <ProjectCard
+                    title={project.title}
+                    img={project.img}
+                    img_mobile={project.img_mobile}
+                    description={project.description}
+                    tech_stack={project.tech_stack}
+                    live_url={project.live_url}
+                    github_url={project.github_url}
+                    imagePosition={imagePosition}
+                  />
+                </div>
+              </AnimationWrapper>
+            );
+          })}
         </div>
 
       </div>
