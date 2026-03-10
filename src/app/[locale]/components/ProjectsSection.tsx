@@ -95,7 +95,7 @@ export default function ProjectsSection() {
 
             return (
               <AnimationWrapper key={project.title}>
-                <div className={`${index < projectList.length - 1 ? "border-b border-zinc-700/50 pb-12 lg:pb-20" : ""}`}>
+                <div className={`${index < projectList.length - 1 ? "border-b border-zinc-700/50 pb-12 lg:pb-20" : "lg:pb-20"}`}>
                   <ProjectCard
                     title={project.title}
                     img={project.img}
