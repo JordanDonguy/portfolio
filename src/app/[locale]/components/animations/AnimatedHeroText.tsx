@@ -29,8 +29,9 @@ export default function AnimatedHeroText({
 				</p>
 				<div className="w-full self-start lg:w-lg xl:w-xl flex flex-col md:flex-row justify-between items-center duration-500 gap-8 md:gap-16">
 					<button
+						type="button"
 						onClick={handleFormButton}
-						className="text-2xl w-9/10 min-w-48 h-16 md:h-20 box-border rounded-full bg-gradient-to-l from-blue-600 inline-flex items-center justify-center hover:scale-110 hover:cursor-pointer active:scale-90 duration-150"
+						className="text-2xl w-9/10 min-w-48 h-16 md:h-20 border border-gray-900 rounded-full bg-gradient-to-l from-blue-600 inline-flex items-center justify-center hover:scale-110 hover:cursor-pointer active:scale-90 duration-150"
 					>
 						{t("contact")}
 					</button>
@@ -38,7 +39,7 @@ export default function AnimatedHeroText({
 						href={`https://res.cloudinary.com/dwcjsb3a5/image/upload/${locale === "fr" ? "CV_Jordan_Donguy_fr_xngvj1" : "Resume_Jordan_Donguy_en_evroye"}.pdf`}
 						download
 						target="blank"
-						className="text-2xl w-9/10 min-w-48 h-16 md:h-20 box-border rounded-full border inline-flex items-center justify-center bg-[rgba(11,11,14,0.7)] md:bg-transparent hover:scale-110 hover:bg-[rgba(60,60,82,0.2)] hover:cursor-pointer active:scale-90 duration-150"
+						className="text-2xl w-9/10 min-w-48 h-16 md:h-20 box-border rounded-full border border-gray-800 inline-flex items-center justify-center bg-gradient-to-br from-zinc-800/90 to-gray-900/70 hover:scale-110 hover:bg-[rgba(60,60,82,0.2)] hover:cursor-pointer active:scale-90 duration-150"
 					>
 						{t("resume")}&nbsp;
 						<Download />

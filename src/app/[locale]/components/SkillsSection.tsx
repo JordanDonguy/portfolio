@@ -24,7 +24,7 @@ export default function SkillsSection() {
             <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap mb-2 md:mb-0">
               {languagesList.map((item, index) =>
                 <ScaleUp key={item} delay={index * 0.07}>
-                  <article key={item} className="flex flex-col items-center justify-evenly w-24 h-24 text-sm bg-zinc-800 rounded-xl">
+                  <article key={item} className="flex flex-col items-center justify-evenly w-24 h-24 text-sm bg-gradient-to-br from-zinc-900 to-zinc-800 border border-gray-800 rounded-xl">
                     <Image src={`/img/logo/${item}.svg`} alt={item} width={56} height={56} />
                     <p>{item.replace(/dot/g, ".")}</p>
                   </article>
@@ -39,7 +39,7 @@ export default function SkillsSection() {
             <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap mb-2 md:mb-0">
               {frontEndList.map((item, index) =>
                 <ScaleUp key={item} delay={index * 0.07}>
-                  <article key={item} className="flex flex-col items-center justify-evenly w-24 h-24 text-sm bg-zinc-800 rounded-xl">
+                  <article key={item} className="flex flex-col items-center justify-evenly w-24 h-24 text-sm bg-gradient-to-br from-zinc-900 to-zinc-800 border border-gray-800 rounded-xl">
                     <Image src={`/img/logo/${item}.svg`} alt={item} width={56} height={56} />
                     <p>{item.replace(/dot/g, ".")}</p>
                   </article>
@@ -54,7 +54,7 @@ export default function SkillsSection() {
             <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap mb-2 md:mb-0">
               {backEndList.map((item, index) =>
                 <ScaleUp key={item} delay={index * 0.07}>
-                  <article key={item} className="flex flex-col items-center justify-evenly w-24 h-24 text-sm bg-zinc-800 rounded-xl">
+                  <article key={item} className="flex flex-col items-center justify-evenly w-24 h-24 text-sm bg-gradient-to-br from-zinc-900 to-zinc-800 border border-gray-800 rounded-xl">
                     <Image src={`/img/logo/${item}.svg`} alt={item} width={56} height={56} />
                     <p>{item.replace(/dot/g, ".")}</p>
                   </article>
@@ -69,7 +69,7 @@ export default function SkillsSection() {
             <div className="flex justify-center items-center gap-x-8 gap-y-4 flex-wrap">
               {toolsList.map((item, index) =>
                 <ScaleUp key={item} delay={index * 0.07}>
-                  <article key={item} className="flex flex-col items-center justify-evenly w-24 h-24 text-sm bg-zinc-800 rounded-xl">
+                  <article key={item} className="flex flex-col items-center justify-evenly w-24 h-24 text-sm bg-gradient-to-br from-zinc-900 to-zinc-800 border border-gray-800 rounded-xl">
                     <Image src={`/img/logo/${item}.svg`} alt={item} width={56} height={56} />
                     <p>{item.replace(/dot/g, ".")}</p>
                   </article>

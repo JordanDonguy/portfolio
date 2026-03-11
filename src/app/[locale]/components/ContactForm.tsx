@@ -156,8 +156,8 @@ export default function ContactForm({ showForm, handleFormButton }: ContactFormP
           <button
             type="submit"
             disabled={status === "loading"}
-            className="mx-auto w-full md:w-1/3 my-2 flex justify-center items-center h-12 rounded-full border flex-shrink-0
-            border-zinc-400 hover:cursor-pointer hover:bg-[rgba(60,60,82,0.2)] hover:md:scale-110 duration-150
+            className="mx-auto w-full md:w-1/3 my-4 flex justify-center items-center h-12 rounded-full flex-shrink-0
+            bg-gradient-to-r from-[#1C1C25] to-[#1b1b24] border-y border-zinc-700 hover:cursor-pointer hover:md:border-gray-600 duration-150
             active:scale-90 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Send size={20} />

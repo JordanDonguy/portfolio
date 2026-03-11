@@ -54,7 +54,7 @@ export default function ProjectCard({
 
 			{/* ----------- Tech stack ----------- */}
 			<div className="mb-6">
-				<h4 className="text-lg lg:text-xl mb-3 text-gray-400">
+				<h4 className="text-lg lg:text-xl mb-3">
 					{t("tech-stack")}
 				</h4>
 				<div className="flex flex-wrap w-full gap-3">
@@ -92,14 +92,14 @@ export default function ProjectCard({
 				<a
 					href={live_url}
 					target="_blank"
-					className="h-11 px-6 text-sm md:text-base flex items-center justify-center text-center border rounded-full bg-gradient-to-l from-blue-600 hover:cursor-pointer hover:scale-105 active:scale-90 duration-150"
+					className="h-11 px-6 text-sm md:text-base flex items-center justify-center text-center border-y border-sky-900 rounded-full bg-gradient-to-tr from-gray-700/60 to-gray-800/60 hover:cursor-pointer hover:border-sky-700 active:scale-90 duration-150"
 				>
 					{t("live-app")}
 				</a>
 				<a
 					href={github_url}
 					target="_blank"
-					className="h-11 px-6 text-center border rounded-full flex justify-center items-center hover:cursor-pointer hover:scale-105 hover:bg-[rgba(60,60,82,0.2)] active:scale-90 duration-150"
+					className="h-11 px-6 text-center border-y border-gray-700 bg-zinc-900 rounded-full flex justify-center items-center hover:cursor-pointer hover:border-gray-500 active:scale-90 duration-150"
 				>
 					<img
 						src="/img/logo/GitHub.svg"

@@ -1,8 +1,8 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { ScaleUpLaptop } from './animations/ScaleUpLaptop';
 import { SlideFromLeft } from "./animations/SlideFromLeft"
 import { SlideFromRight } from './animations/SlideFromRight';
-import { ScaleUpLaptop } from './animations/ScaleUpLaptop';
 
 export default function AboutSection() {
   const t = useTranslations("about");
@@ -16,7 +16,7 @@ export default function AboutSection() {
           {/* ----------- Presentation ----------- */}
           <SlideFromLeft>
             <div className="py-8 rounded-asym text-gray-300 border-zinc-700 2xl:py-12 lg:mx-auto">
-              <article className="text-md md:text-lg/10 lg:text-start">
+              <article className="text-md md:text-lg/9 lg:text-start">
                 <h3 className="text-2xl pb-6 text-center text-cyan-500 font-bold">{t("presentation-title")}</h3>
                 {t.rich("presentation", {
                   b: (chunks) => <span className="text-white font-bold">{chunks}</span>
@@ -30,8 +30,8 @@ export default function AboutSection() {
             <Image
               src="/img/laptop.webp"
               alt="laptop"
-              width={2000}
-              height={2000}
+              width={1000}
+              height={1000}
               quality={100}
               priority={true}
               className="mt-6 lg:mt-0"
@@ -39,23 +39,23 @@ export default function AboutSection() {
           </ScaleUpLaptop>
         </div>
 
-        <div className="max-w-7xl px-2 md:px-5 relative grid grid-cols-1 lg:grid-cols-2 w-full md:mt-[-px] lg:mt-12">
+        <div className="max-w-7xl px-2 md:px-5 relative grid grid-cols-1 lg:grid-cols-2 w-full lg:mt-16">
           {/* ----------- Background image ----------- */}
           <SlideFromLeft>
             <Image
               src="/img/path.webp"
               alt="path"
-              width={2000}
-              height={2000}
+              width={1000}
+              height={1000}
               quality={100}
               priority={true}
-              className="hidden lg:block col-span-1 mx-auto w-2xl xl:w-4xl z-0 mt-[-70px] ml-[-10px]"
+              className="hidden lg:block col-span-1 w-[90%] mx-auto z-0 mt-[-40px] ml-4 rotate-3"
             />
           </SlideFromLeft>
 
           {/* ----------- Background text ----------- */}
           <SlideFromRight>
-            <article className="md:text-lg/10 max-w-7xl px-2 md:px-5 lg:text-start z-20 md:mt-[-70px] lg:mt-0">
+            <article className="md:text-lg/9 max-w-7xl px-2 md:px-5 lg:text-start z-20 md:mt-[-70px] lg:mt-0">
               <h3 className="text-2xl pb-6 text-center text-cyan-500 font-bold">{t("background-title")}</h3>
               {t.rich("background", {
                 b: (chunks) => <span className="text-white font-bold">{chunks}</span>
