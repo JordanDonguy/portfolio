@@ -48,7 +48,7 @@ export default function ProjectCard({
 			</h3>
 
 			{/* ----------- Description ----------- */}
-			<p className="text-gray-200 text-xs xl:text-sm 2xl:text-base mb-6">
+			<p className="text-gray-200 text-sm 2xl:text-base mb-6">
 				{description}
 			</p>
 
@@ -58,9 +58,9 @@ export default function ProjectCard({
 					{t("tech-stack")}
 				</h4>
 				<div className="flex flex-wrap w-full gap-3">
-					{tech_stack.map((badge, index) => (
+					{tech_stack.map((badge) => (
 						<img
-							key={badge.name + index}
+							key={badge.name}
 							src={badge.url}
 							alt={badge.name}
 							className="h-6 2xl:h-7"
@@ -92,7 +92,7 @@ export default function ProjectCard({
 				<a
 					href={live_url}
 					target="_blank"
-					className="h-11 px-6 text-sm md:text-base flex items-center justify-center text-center border-y border-sky-900 rounded-full bg-gradient-to-tr from-gray-700/60 to-gray-800/60 hover:cursor-pointer hover:border-sky-700 active:scale-90 duration-150"
+					className="h-11 px-6 text-sm md:text-base flex items-center justify-center text-center border-y border-sky-900 rounded-full bg-linear-to-tr from-gray-700/60 to-gray-800/60 hover:cursor-pointer hover:border-sky-700 active:scale-90 duration-150"
 				>
 					{t("live-app")}
 				</a>
