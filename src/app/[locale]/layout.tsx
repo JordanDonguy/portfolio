@@ -3,8 +3,13 @@ import { Comfortaa } from "next/font/google";
 import "../styles/globals.css";
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
 import Navbar from "./components/Navbar";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 const comfortaa = Comfortaa({
   variable: "--font-comfortaa",
@@ -32,7 +37,8 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
- 
+  setRequestLocale(locale);
+
   return (
     <html lang={locale}>
 
