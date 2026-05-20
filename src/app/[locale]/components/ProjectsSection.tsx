@@ -8,7 +8,6 @@ import ProjectCard from './ProjectCard';
 export default function ProjectsSection() {
   const t = useTranslations("projects")
 
-  const jsBadge = { name: "JavaScript", url: "https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white&style=flat" };
   const tsBadge = { name: "TypeScript", url: "https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white&style=flat" };
   const reactBadge = { name: "React.js", url: "https://img.shields.io/badge/React-61DAFB?logo=React&logoColor=white&style=flat" };
   const reactRouterBadge = { name: "React Router", url: "https://img.shields.io/badge/React Router-CA4245?logo=reactrouter&logoColor=white&style=flat" };
@@ -23,7 +22,6 @@ export default function ProjectsSection() {
   const supabaseBadge = { name: "Supabase", url: "https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white&style=flat" };
   const cloudflareBadge = { name: "Cloudflare", url: "https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white&style=flat" };
   const geminiBadge = { name: "Gemini", url: "https://img.shields.io/badge/Google Gemini-8E75B2?logo=google gemini&logoColor=white&style=flat" };
-  const mistralBadge = { name: "Mistral", url: "https://img.shields.io/badge/Mistral AI-FA520F?logo=Mistral AI&logoColor=white&style=flat" };
   const jestBadge = { name: "Jest", url: "https://img.shields.io/badge/Jest-C21325?logo=Jest&logoColor=white&style=flat" };
   const vitestBadge = { name: "Vitest", url: "https://img.shields.io/badge/Vitest-6C6C6C?logo=Vitest&logoColor=white&style=flat" };
   const dockerBadge = { name: "Docker", url: "https://img.shields.io/badge/Docker-2496ED?logo=Docker&logoColor=white&style=flat" };
@@ -62,31 +60,13 @@ export default function ProjectsSection() {
       tech_stack: [tsBadge, nextJsBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, prismaBadge, vitestBadge, dockerBadge, ghActionsBadge, hetznerBadge, nginxBadge, supabaseBadge],
       live_url: "https://blablabook.space",
       github_url: "https://github.com/BlaBlaBook",
-    },
-    {
-      title: "Aria",
-      img: "/img/projects/aria.webp",
-      img_mobile: "/img/projects/aria-mobile.webp",
-      description: t("aria"),
-      tech_stack: [tsBadge, nextJsBadge, mistralBadge, tailwindBadge, postgresqlBadge, vercelBadge, supabaseBadge],
-      live_url: "https://chat-with-aria.vercel.app",
-      github_url: "https://github.com/JordanDonguy/aria",
-    },
-    {
-      title: "Guitar Shop",
-      img: "/img/projects/guitar-shop.webp",
-      img_mobile: "/img/projects/guitar-shop-mobile.webp",
-      description: t("guitar-shop"),
-      tech_stack: [jsBadge, reactBadge, reactRouterBadge, tailwindBadge, nodeBadge, expressBadge, postgresqlBadge, cloudflareBadge, supabaseBadge],
-      live_url: "https://app.guitar-shop.store",
-      github_url: "https://github.com/JordanDonguy/guitar-shop-frontend",
-    },
+    }
   ];
 
   return (
     <section id="projects" className="relative w-full">
       <div className="h-full text-center py-8">
-        <h2 className="text-4xl font-bold py-8 md:py-16 mb-8 bg-[rgb(28,32,40))] w-full">{t("title")}</h2>
+        <h2 className="text-4xl font-bold py-8 md:py-16 mb-8 bg-[rgb(28,32,40)] w-full">{t("title")}</h2>
 
         <div className="max-w-7xl mx-auto space-y-12 lg:space-y-20">
           {projectList.map((project, index) => {
