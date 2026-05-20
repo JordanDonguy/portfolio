@@ -3,9 +3,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
+import { usePathname, useRouter } from "../../../i18n/navigation";
 import { useActiveSection } from "./utils/useActiveSection";
 
 export default function Navbar() {
@@ -15,11 +15,8 @@ export default function Navbar() {
 	const pathname = usePathname(); // current path
 
 	const switchLocale = () => {
-		const segments = pathname.split("/");
-		segments[1] = locale === "en" ? "fr" : "en";
-		const newPath = segments.join("/");
-
-		router.push(newPath);
+		const nextLocale = locale === "en" ? "fr" : "en";
+		router.push(pathname, { locale: nextLocale });
 	};
 
 	const sectionIds = ["home", "about", "skills", "projects", "contact"];
