@@ -1,15 +1,15 @@
 "use client";
 
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from 'framer-motion';
-import { useActiveSection } from "./utils/useActiveSection";
-import ContactForm from "./ContactForm";
+import { useEffect, useState } from "react";
 import AnimatedHeroText from "./animations/AnimatedHeroText";
 import { SlideFromLeft } from "./animations/SlideFromLeft";
+import ContactForm from "./ContactForm";
+import { useActiveSection } from "./utils/useActiveSection";
 
 export default function HeroSection() {
-  const { activeSection } = useActiveSection(["home", "about"], 0.6)
+  const { activeSection } = useActiveSection(["home", "about"])
   const [showForm, setShowForm] = useState(false);
   const handleFormButton = () => {
     setShowForm(prev => !prev);
@@ -23,7 +23,7 @@ export default function HeroSection() {
 
   return (
     <section id="home"
-      className="relative w-full overflow-hidden mx-auto min-h-[100svh] md:py-20 flex flex-col max-w-5xl xl:max-w-7xl
+      className="relative w-full overflow-hidden mx-auto min-h-svh md:py-20 flex flex-col max-w-5xl xl:max-w-7xl
     lg:flex-row gap-[10%] lg:pl-[2%] xl:pl-5 items-center justify-center xl:justify-between text-center lg:text-start"
     >
 

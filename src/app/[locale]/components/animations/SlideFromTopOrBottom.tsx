@@ -1,7 +1,7 @@
 // components/animations/SlideFromLeft.tsx
 'use client';
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState, useEffect, ReactNode } from 'react';
+import { type ReactNode, useEffect, useRef, useState } from 'react';
 import { useActiveSection } from "../utils/useActiveSection";
 
 interface SlideFromTopOrBottom {
@@ -10,7 +10,7 @@ interface SlideFromTopOrBottom {
 
 export const SlideFromTopOrBottom = ({ children }: SlideFromTopOrBottom) => {
   const sectionIds = ["home", "about", "skills", "projects", "contact"];
-  const { fromTop } = useActiveSection(sectionIds, 0.6);
+  const { fromTop } = useActiveSection(sectionIds);
 
   const ref = useRef<HTMLDivElement | null>(null);
 

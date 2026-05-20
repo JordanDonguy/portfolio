@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { useTranslations, useLocale } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { useActiveSection } from "./utils/useActiveSection";
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu } from "lucide-react";
+import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { useMemo, useState } from "react";
+import { useActiveSection } from "./utils/useActiveSection";
 
 export default function Navbar() {
 	const t = useTranslations("nav");
@@ -22,11 +23,8 @@ export default function Navbar() {
 	};
 
 	const sectionIds = ["home", "about", "skills", "projects", "contact"];
-	const { activeSection } = useActiveSection(sectionIds, 0.6);
-	const { activeSection: activeSectionMobile } = useActiveSection(
-		sectionIds,
-		0.2,
-	);
+	const { activeSection } = useActiveSection(sectionIds);
+	const { activeSection: activeSectionMobile } = useActiveSection(sectionIds);
 
 	const [menuVisibility, setMenuVisibility] = useState(false);
 
@@ -53,9 +51,9 @@ export default function Navbar() {
 				<div className="max-w-7xl h-full mx-auto flex justify-between items-center px-5">
 					<a
 						href="#home"
-						className="font-bold text-2xl text-cyan-500 hover:scale-110 active:scale-90 duration-100"
+						className="font-bold text-3xl pt-1 text-cyan-500 hover:scale-110 active:scale-90 duration-100"
 					>
-						JD
+						<Image src="/img/logo.png" alt="JD" width={40} height={24} />
 					</a>
 					<ul className="hidden md:flex space-x-3 lg:space-x-6 items-center">
 						{/* ----------- Section links ----------- */}
@@ -64,7 +62,7 @@ export default function Navbar() {
 								<a
 									href={`#${id}`}
 									className={`hover:text-blue-400 hover:cursor-pointer font-bold  border-neutral-700 h-full pr-3 lg:pr-5
-                  ${sectionIds.findIndex((x) => x === id) < sectionIds.length - 1 && "border-r-2"}
+                  ${sectionIds.indexOf(id) < sectionIds.length - 1 && "border-r-2"}
                   ${activeSection === id ? "text-cyan-500 underline underline-offset-28" : ""}`}
 								>
 									{t(id)}
@@ -77,7 +75,7 @@ export default function Navbar() {
 							<button
 								type="button"
 								onClick={switchLocale}
-								className="group relative bg-gradient-to-br from-zinc-800/70 to-zinc-900/90 w-18 py-2 text-sm font-bold border border-zinc-800 rounded-lg hover:bg-[rgba(91,91,115,0.15)] hover:cursor-pointer hover:border-zinc-700 hover:text-blue-300 active:scale-90 duration-100"
+								className="group relative bg-linear-to-br from-zinc-800/70 to-zinc-900/90 w-18 py-2 text-sm font-bold border border-zinc-800 rounded-lg hover:bg-[rgba(91,91,115,0.15)] hover:cursor-pointer hover:border-zinc-700 hover:text-blue-300 active:scale-90 duration-100"
 							>
 								<span className="group-hover:hidden">
 									{locale.toUpperCase()}
@@ -94,8 +92,11 @@ export default function Navbar() {
 			{/* ----------- Navbar Mobile ----------- */}
 			<nav className="md:hidden w-full h-16 border-b border-zinc-700 shadow-md">
 				<div className="w-full h-full bg-[rgba(11,11,14,0.5)] backdrop-blur-md flex justify-between items-center">
-					<a href="#home" className="font-bold text-xl text-cyan-500 pl-4">
-						Portfolio
+					<a
+						href="#home"
+						className="font-bold text-3xl pl-6 pt-1 text-cyan-500 hover:scale-110 active:scale-90 duration-100"
+					>
+						<Image src="/img/logo.png" alt="JD" width={40} height={24} />
 					</a>
 					<div className="flex gap-8">
 						<button
@@ -116,15 +117,15 @@ export default function Navbar() {
 							animate={{ x: 0, opacity: 1 }}
 							exit={{ x: "100%", opacity: 0 }}
 							transition={{ type: "spring", stiffness: 300, damping: 28 }}
-							className="fixed w-screen h-[100svh] flex flex-col items-center justify-center top-16 md:hidden z-50 bg-[rgba(11,11,16,0.98)]"
+							className="fixed w-screen h-svh flex flex-col items-center justify-center top-16 md:hidden z-50 bg-[rgba(11,11,16,0.98)]"
 						>
-							<ul className="flex flex-col w-full h-full max-h-[700px] justify-evenly items-center pb-16">
+							<ul className="flex flex-col w-full h-full max-h-175 justify-evenly items-center pb-16">
 								{/* ----------- Locale switch button ----------- */}
 								<li>
 									<button
 										type="button"
 										onClick={switchLocale}
-										className="bg-gradient-to-br from-zinc-800/70 to-zinc-900/90 px-12 py-3 border border-zinc-800 rounded-lg hover:bg-zinc-700 text-sm font-bold active:scale-90"
+										className="bg-linear-to-br from-zinc-800/70 to-zinc-900/90 px-12 py-3 border border-zinc-800 rounded-lg hover:bg-zinc-700 text-sm font-bold active:scale-90"
 									>
 										{locale.toUpperCase()}
 									</button>
